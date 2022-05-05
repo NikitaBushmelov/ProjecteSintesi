@@ -20217,8 +20217,8 @@ GameObject:
   - component: {fileID: 660352926}
   - component: {fileID: 660352928}
   - component: {fileID: 660352930}
-  - component: {fileID: 660352929}
   - component: {fileID: 660352931}
+  - component: {fileID: 660352929}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -20325,8 +20325,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 907b6e0fe5f3b774a96b3d55aa7b8f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movespeed: 4
-  rb: {fileID: 660352928}
+  speed: 5
+  rotationSpeed: 500
 --- !u!70 &660352930
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
