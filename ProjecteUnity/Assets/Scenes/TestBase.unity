@@ -41736,6 +41736,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1425163290 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3580823887954350384, guid: a4dc2a298a3fe6e448cec51d32296e20, type: 3}
+  m_PrefabInstance: {fileID: 3580823888752986799}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1427452543
 GameObject:
   m_ObjectHideFlags: 0
@@ -61526,13 +61531,49 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6609268984574738026, guid: f17eedc176569d8409c80911097a4495, type: 3}
+      propertyPath: dmg
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6609268984574738026, guid: f17eedc176569d8409c80911097a4495, type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6609268984574738026, guid: f17eedc176569d8409c80911097a4495, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1425163290}
+    - target: {fileID: 6609268984574738026, guid: f17eedc176569d8409c80911097a4495, type: 3}
+      propertyPath: shoots
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6609268984574738026, guid: f17eedc176569d8409c80911097a4495, type: 3}
+      propertyPath: isFlipped
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6609268984574738026, guid: f17eedc176569d8409c80911097a4495, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 1804889911351856390, guid: f2ca6c0c3767c6e418e8bf16f5493b0e, type: 3}
+    - target: {fileID: 6609268984574738026, guid: f17eedc176569d8409c80911097a4495, type: 3}
+      propertyPath: rotationSpeed
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 6609268984574738026, guid: f17eedc176569d8409c80911097a4495, type: 3}
+      propertyPath: stoppingDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6609268984574738026, guid: f17eedc176569d8409c80911097a4495, type: 3}
+      propertyPath: startTimeBtwShots
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6609268984574738030, guid: f17eedc176569d8409c80911097a4495, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6609268984574738030, guid: f17eedc176569d8409c80911097a4495, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.55
+      value: 0.81
       objectReference: {fileID: 0}
     - target: {fileID: 6609268984574738030, guid: f17eedc176569d8409c80911097a4495, type: 3}
       propertyPath: m_LocalPosition.y
