@@ -7,21 +7,30 @@ public class bala : MonoBehaviour
 
 
     public float speed =0.1f;
-    public GameObject impactEffect;
     public Rigidbody2D rb;
-    
+    public int damage = 40;
+    public GameObject impactEffect;
     // Update is called once per frame
-    private void Update()
+    void Start()
     {
         rb.velocity = transform.right * speed; 
     }
-
      void OnTriggerEnter2D(Collider2D col)
     {
         
-        if (col.gameObject.tag == "Paret")
+       
+        Enemy enemy = col.GetComponent<Enemy>();
+        if (enemy != null)
         {
-            Destroy(gameObject);
+            enemy.TakeDamage(damage);
         }
+
+        Instantiate(impactEffect, transform.position, transform.rotation);
+
+
+
+
+        Destroy(gameObject);
+       
     }
 }
