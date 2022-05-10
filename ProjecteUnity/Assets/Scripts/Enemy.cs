@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
 
     [SerializeField]
     private float rotationSpeed;
-    public int health = 100;
+    public int Health = 100;
 
     public GameObject deathEffect;
     public float speed;
@@ -18,16 +18,17 @@ public class Enemy : MonoBehaviour
     private float timeBtwShots;
     public float startTimeBtwShots;
     public GameObject projectile;
-    public Transform Player;
+    public  Transform Player;
     public bool shoots;
-    public bool isFlipped = false;
-
+    private Vector2 target;
+    public bool isFlipped ;
+ 
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        Health -= damage;
 
-        if (health <= 0)
+        if (Health <= 0)
         {
             Die();
         }
@@ -45,33 +46,38 @@ public class Enemy : MonoBehaviour
 
     void Update ()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        /* enemic espejo
+         * float horizontalInput = Input.GetAxis("Horizontal");
+         float verticalInput = Input.GetAxis("Vertical");
 
-        Vector2 movementDirection = new Vector2(horizontalInput, verticalInput);
-        float inputMagnitude = Mathf.Clamp01(movementDirection.magnitude);
-        movementDirection.Normalize();
+         Vector2 movementDirection = new Vector2(horizontalInput, verticalInput);
+         float inputMagnitude = Mathf.Clamp01(movementDirection.magnitude);
+         movementDirection.Normalize();
+
+         transform.Translate(movementDirection * speed * inputMagnitude * Time.deltaTime, Space.World);
+        */
+
+
         LookPlayer();
         if (Vector2.Distance(transform.position, Player.position) > stoppingDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, Player.position, speed * Time.deltaTime);
-            Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, movementDirection);
-
+            
         }
 
         else if (Vector2.Distance(transform.position, Player.position) < stoppingDistance && Vector2.Distance(transform.position, Player.position) > retreatDistance)
         {
             transform.position = this.transform.position;
-            Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, movementDirection);
-
+            
         }
 
         else if (Vector2.Distance(transform.position, Player.position) < retreatDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, Player.position, -speed * Time.deltaTime);
-
-            Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, movementDirection);
+            
         }
+
+
 
         //only enemy is shooting enables time between shots
         if (shoots == true)
@@ -90,31 +96,38 @@ public class Enemy : MonoBehaviour
         }
 
         //boom boom effect
-        if (health <= 0 && !IsInvoking("DestroySpawnPoint"))
-        {
-
-            gameObject.GetComponent<BoxCollider2D>().enabled = false;
-            Invoke("DestroySpawnPoint", 0.0f);
-        }
+        
     }
 
 
     public void LookPlayer()
     {
-        Vector3 flipped = transform.localScale;
+
+
+        target = GameObject.FindGameObjectWithTag("Player").transform.position;
+        Vector2 direction = target - (Vector2)transform.position;
+        var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+        /* Vector3 flipped = transform.localScale;
         flipped.z *= -1f;
         if (transform.position.x > Player.position.x && isFlipped)
         {
             transform.localScale = flipped;
             transform.Rotate(0f, 180f, 0f);
-            isFlipped = false;
-        }
+
+
+             isFlipped = false;
+
+         }
         else if (transform.position.x < Player.position.x && !isFlipped)
         {
             transform.localScale = flipped;
+
             transform.Rotate(0f, 180f, 0f);
-            isFlipped = true;
-        }
+
+          isFlipped = true;
+        } */
     }
 public void OnCollisionEnter2D(Collision2D col)
 {

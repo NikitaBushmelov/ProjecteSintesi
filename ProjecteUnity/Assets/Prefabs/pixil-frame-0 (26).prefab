@@ -135,5 +135,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fdbca30422e02243824d032aefd28c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 0
   health: 100
   deathEffect: {fileID: 4073215557535881719, guid: 95981fd1477106444a99ff7e92b2900b, type: 3}
+  speed: 2
+  dmg: 0
+  stoppingDistance: 0
+  retreatDistance: 0
+  startTimeBtwShots: 0
+  projectile: {fileID: 0}
+  Player: {fileID: 0}
+  shoots: 0
+  isFlipped: 0

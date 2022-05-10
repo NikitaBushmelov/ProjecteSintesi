@@ -8,13 +8,13 @@ public class Projectile : MonoBehaviour
     public float lifeTime;
    
     public GameObject destroyEffect;
-    public int dmg = 10;
+    public int dmg = 50;
     private Vector2 target;
     public Rigidbody2D rb;
 
     private void Start()
     {
-        Invoke("DestroyBullet", lifeTime);
+        
         targetPlayer();
         rb.velocity = transform.right * speed;
     }
@@ -31,8 +31,9 @@ public class Projectile : MonoBehaviour
             
             DestroyBullet();
         }
-        if (other.CompareTag("Walls"))
+        if (other.CompareTag("Paret"))
         {
+            
             DestroyBullet();
         }
     }
@@ -45,7 +46,7 @@ public class Projectile : MonoBehaviour
     }
     void DestroyBullet()
     {
-        //Instantiate(destroyEffect, transform.position, Quaternion.identity);
+        Instantiate(destroyEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

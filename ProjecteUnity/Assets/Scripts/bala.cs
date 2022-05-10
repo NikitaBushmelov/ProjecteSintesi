@@ -5,7 +5,7 @@ using UnityEngine;
 public class bala : MonoBehaviour
 {
 
-
+    
     public float speed =0.1f;
     public Rigidbody2D rb;
     public int damage = 40;
@@ -26,9 +26,6 @@ public class bala : MonoBehaviour
         }
 
         Instantiate(impactEffect, transform.position, transform.rotation);
-
-
-
 
         Destroy(gameObject);
        
