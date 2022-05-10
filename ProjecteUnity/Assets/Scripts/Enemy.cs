@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
 
     [SerializeField]
     private float rotationSpeed;
-    public int health = 100;
+    public int Health = 100;
 
     public GameObject deathEffect;
     public float speed;
@@ -26,9 +26,9 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        Health -= damage;
 
-        if (health <= 0)
+        if (Health <= 0)
         {
             Die();
         }
