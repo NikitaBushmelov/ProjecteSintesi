@@ -5,17 +5,18 @@ using UnityEngine;
 public class bala : MonoBehaviour
 {
 
-    
+
     public float speed =0.1f;
     public Rigidbody2D rb;
-    public int damage = 40;
+    private int damage;
     public GameObject impactEffect;
     // Update is called once per frame
     void Start()
     {
-        rb.velocity = transform.right * speed; 
+        rb.velocity = transform.right * speed;
+        damage = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().daño;
     }
-     void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerEnter2D(Collider2D col)
     {
         
        

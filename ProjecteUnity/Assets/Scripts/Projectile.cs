@@ -36,6 +36,11 @@ public class Projectile : MonoBehaviour
             
             DestroyBullet();
         }
+        if (other.CompareTag("Bala"))
+        {
+
+            DestroyBullet();
+        }
     }
     void targetPlayer()
     {
@@ -47,6 +52,6 @@ public class Projectile : MonoBehaviour
     void DestroyBullet()
     {
         Instantiate(destroyEffect, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        Destroy(this.gameObject);
     }
 }

@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DisparoJugador : MonoBehaviour
 {
     [SerializeField] private Transform controladorDisparo;
     [SerializeField] private GameObject bala;
 
+    public Text AttackSpeed;
     [SerializeField] private float tiempoEntreDisparos;
 
 
@@ -25,6 +27,10 @@ public class DisparoJugador : MonoBehaviour
             Disparar();
             tiempoSiguienteDisparo = Time.time + tiempoEntreDisparos;
         }
+        aaSpeedText();
+    }
+    void aaSpeedText() {
+        AttackSpeed.text = "" + tiempoEntreDisparos;
     }
     private void Disparar ()
     {
