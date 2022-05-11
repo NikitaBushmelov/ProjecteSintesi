@@ -34,4 +34,5 @@ public class RoomTemplates : MonoBehaviour
             waiTime -= Time.deltaTime;
         }
     }
+    
 }
