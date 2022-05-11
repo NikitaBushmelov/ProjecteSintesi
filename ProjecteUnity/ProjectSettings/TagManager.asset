@@ -12,6 +12,9 @@ TagManager:
   - Spawner
   - EnemySpawn
   - enemy
+  - Bala
+  - Laser
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -72,4 +75,7 @@ TagManager:
     locked: 0
   - name: Maquina
     uniqueID: 3132789999
+    locked: 0
+  - name: Item
+    uniqueID: 1529830371
     locked: 0

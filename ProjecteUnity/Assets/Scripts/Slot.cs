@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Slot : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject item;
+    public int ID;
+    public string type;
+    public string desc;
+    public bool empty;
+    public Sprite icon;
+
+    public Transform slotIcon;
+
+    private void Start()
     {
-        
+        slotIcon = transform.GetChild(0);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void updateSlot() {
+        slotIcon.GetComponent<Image>().sprite = icon;
     }
 }
