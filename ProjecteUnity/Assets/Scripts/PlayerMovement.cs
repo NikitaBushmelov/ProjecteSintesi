@@ -13,13 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public Text MovementSpeed;
     public int daño;
 
-    //inventory
-    private bool invetoryEnabled;
-    public GameObject inventory;
-    private int allSlots;
-    private int EnabledSlots;
-    private GameObject[] slot;
-    public GameObject slotHolder;
+    
 
     public Text AttackText;
 
@@ -28,11 +22,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        allSlots = slotHolder.transform.childCount;
-        slot = new GameObject[allSlots];
-        for (int i=0;i<allSlots;i++) {
-            slot[i] = slotHolder.transform.GetChild(i).gameObject;
-        }
+        
     }
 
     // Update is called once per frame
@@ -57,17 +47,7 @@ public class PlayerMovement : MonoBehaviour
         //text
         movementText();
         dmgText();
-        //inventory
-        if (Input.GetKeyDown(KeyCode.I)) {
-            invetoryEnabled=!invetoryEnabled;
-        }
-        if (invetoryEnabled == true)
-        {
-            inventory.SetActive(true);
-        }
-        else {
-            inventory.SetActive(false);
-        }
+        
     }
     
     public void dmgText()
@@ -91,17 +71,8 @@ public class PlayerMovement : MonoBehaviour
         if (collision.CompareTag("Laser")) {
             TakeDamage();
         }
-        if (collision.CompareTag("Item")) {
-            GameObject itemPickedUp = collision.gameObject;
-            Item item = itemPickedUp.GetComponent<Item>();
-            AddItem(itemPickedUp,item.ID,item.type,item.desc,item.icon);
-        }
+        
     }
-    void AddItem(GameObject itemObject, int itemID, string itemType, string itemDesc, Sprite itemIcon) {
-        for (int i=0;i<allSlots;i++) { 
-            
-        }
-
-    }
+    
 
 }
