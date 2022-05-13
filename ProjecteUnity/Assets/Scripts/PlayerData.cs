@@ -12,7 +12,7 @@ public class PlayerData
     public PlayerData(PlayerMovement player)
     {
         health = player.health;
-        damage = player.daño;
+        damage = player.dmg;
         speed = player.speed;
 
     }

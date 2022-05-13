@@ -14,7 +14,7 @@ public class bala : MonoBehaviour
     void Start()
     {
         rb.velocity = transform.right * speed;
-        damage = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().daño;
+        damage = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().dmg;
     }
     void OnTriggerEnter2D(Collider2D col)
     {
