@@ -11,6 +11,8 @@ public class DisparoJugador : MonoBehaviour
     public Text AttackSpeed;
     [SerializeField] private float tiempoEntreDisparos;
 
+    
+
 
     private float tiempoSiguienteDisparo;
     // Start is called before the first frame update
