@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Inventory : MonoBehaviour
     private int allSlots;
     private int EnabledSlots;
     private GameObject[] slot;
+    public int size;
     public GameObject slotHolder;
     public void Start()
     {
@@ -45,6 +47,7 @@ public class Inventory : MonoBehaviour
     {
         if (other.CompareTag("Item"))
         {
+            
             GameObject itemPickedUp = other.gameObject;
             Item item = itemPickedUp.GetComponent<Item>();
             AddItem(itemPickedUp, item.ID, item.type, item.desc, item.icon);
@@ -54,9 +57,8 @@ public class Inventory : MonoBehaviour
     {
         for (int c = 0; c < allSlots; c++)
         {
-            if (slot[c].GetComponent<Slot>().empty)
+            if (slot[c].GetComponent<Slot>().empty==false)
             {
-
                 itemObject.GetComponent<Item>().pickedUp = true;
                 slot[c].GetComponent<Slot>().item = itemObject;
                 slot[c].GetComponent<Slot>().ID = itemID;
@@ -69,9 +71,10 @@ public class Inventory : MonoBehaviour
 
                 slot[c].GetComponent<Slot>().updateSlot();
 
-                slot[c].GetComponent<Slot>().empty = false;
+                slot[c].GetComponent<Slot>().empty = true;
+
+                return;
             }
-            return;
         }
 
     }

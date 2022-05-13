@@ -7,8 +7,9 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
-    private float speed;
+    public float speed;
     public int health;
+    public static int playerHealth;
     public Text hpText;
     public Text MovementSpeed;
     public int daño;
@@ -22,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerHealth = health;
     }
 
     // Update is called once per frame
@@ -71,8 +72,21 @@ public class PlayerMovement : MonoBehaviour
         if (collision.CompareTag("Laser")) {
             TakeDamage();
         }
-        
+        if (collision.CompareTag("Test"))
+        {
+            SceneManager.LoadScene("TestMap");
+        }
+
     }
-    
+    public void SavePlayer() {
+        SaveSystem.SavePlayer(this);
+    }
+    public void LoadPlayer()
+    {
+        PlayerData data= SaveSystem.LoadPlayer();
+        speed = data.speed;
+        daño = data.damage;
+        health = data.health;
+    }
 
 }
