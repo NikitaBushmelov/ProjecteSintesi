@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public static int playerHealth;
     public Text hpText;
     public Text MovementSpeed;
-    public int daño;
+    public int daÃ±o;
 
     
 
@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
     
     public void dmgText()
     {
-        AttackText.text = "" + daño;
+        AttackText.text = "" + daÃ±o;
     }
 
     public void movementText() 
