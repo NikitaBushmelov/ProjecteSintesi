@@ -8,9 +8,11 @@ public class Projectile : MonoBehaviour
     public float lifeTime;
    
     public GameObject destroyEffect;
-    public int dmg = 50;
+    public int dmg = 20;
     private Vector2 target;
     public Rigidbody2D rb;
+
+   
 
     private void Start()
     {

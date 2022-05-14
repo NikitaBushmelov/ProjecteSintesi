@@ -22,7 +22,11 @@ public class Enemy : MonoBehaviour
     public bool shoots;
     private Vector2 target;
     public bool isFlipped ;
- 
+    
+     [SerializeField] public AudioSource controldisparo;
+    public AudioClip sonidodisparo;
+    public AudioClip sonidoexplosion1;
+    public AudioSource controlexplosion1;
 
     public void TakeDamage(int damage)
     {
@@ -38,11 +42,22 @@ public class Enemy : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player").transform;
     }
     // Update is called once per frame
-    void Die()
+
+    void Die ()
     {
+
         Instantiate(deathEffect, transform.position, Quaternion.identity);
+        controlexplosion1.clip = sonidoexplosion1;
+        controlexplosion1.maxDistance = 100;
         Destroy(gameObject);
+
+       
+      
+      
+        
     }
+  
+   
 
     void Update ()
     {
@@ -86,6 +101,7 @@ public class Enemy : MonoBehaviour
             {
                 Instantiate(projectile, transform.position, Quaternion.identity);
                 timeBtwShots = startTimeBtwShots;
+                controldisparo.PlayOneShot(sonidodisparo);
 
             }
 
@@ -137,7 +153,7 @@ public void OnCollisionEnter2D(Collision2D col)
 
         
     }
-
+   
 }
 
 

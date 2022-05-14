@@ -12,7 +12,8 @@ public class DisparoJugador : MonoBehaviour
     [SerializeField] private float tiempoEntreDisparos;
 
     
-
+    public AudioSource controlSonido;
+    public AudioClip sonidoDisparo;
 
     private float tiempoSiguienteDisparo;
     // Start is called before the first frame update
@@ -26,8 +27,10 @@ public class DisparoJugador : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1") && Time.time >= tiempoSiguienteDisparo)
         {
+
             Disparar();
             tiempoSiguienteDisparo = Time.time + tiempoEntreDisparos;
+            controlSonido.PlayOneShot(sonidoDisparo);
         }
         aaSpeedText();
     }
