@@ -6,13 +6,14 @@ using UnityEngine.UI;
 public class UpgradeButtton : MonoBehaviour
 {
     public int ID;
-    public Text monedes;
+    //public Text monedes;
     private string quantitatMonedes;
     private int qm;
-    public Text preu;
+    //public Text preu;
     private string quantitatPreu;
     private int qp;
     public int preuStandart;
+    public Button btn;
     
 
     // Start is called before the first frame update
@@ -24,14 +25,18 @@ public class UpgradeButtton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        quantitatMonedes = monedes.text;
+        
+        /*quantitatMonedes = monedes.text;
         qm = int.Parse(quantitatMonedes);
         quantitatPreu = preu.text;
-        qp = int.Parse(quantitatPreu);
-        comprobarId();
+        qp = int.Parse(quantitatPreu);*/
+        //comprobarId();
+        btn.onClick.AddListener(comprobarId);
     }
+    
     void comprobarId() {
-        if (ID == 1)
+        Debug.Log("clicked");
+        /*if (ID == 1)
         {
             int nivell = 0;
             if (nivell==0) {
@@ -95,6 +100,6 @@ public class UpgradeButtton : MonoBehaviour
             {
 
             }
-        }
+        }*/
     }
 }
