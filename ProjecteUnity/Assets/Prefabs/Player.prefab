@@ -414,7 +414,7 @@ MonoBehaviour:
   health: 100
   hpText: {fileID: 0}
   MovementSpeed: {fileID: 0}
-  dmg: 0
+  dmg: 20
   AttackText: {fileID: 0}
   rotationSpeed: 500
 --- !u!114 &8405468785630269854
@@ -433,6 +433,8 @@ MonoBehaviour:
   bala: {fileID: 3603973071394402404, guid: 3beec3426e41dfa4aaf4ece8006e1236, type: 3}
   AttackSpeed: {fileID: 0}
   tiempoEntreDisparos: 0.4
+  controlSonido: {fileID: 0}
+  sonidoDisparo: {fileID: 0}
 --- !u!114 &8405468786789964306
 MonoBehaviour:
   m_ObjectHideFlags: 0
