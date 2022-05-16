@@ -123,7 +123,7 @@ public class Enemy : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").transform.position;
         Vector2 direction = target - (Vector2)transform.position;
         var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        transform.rotation = Quaternion.AngleAxis(angle-90, Vector3.forward);
 
         /* Vector3 flipped = transform.localScale;
         flipped.z *= -1f;
