@@ -9,6 +9,7 @@ public class Item : MonoBehaviour
     public string type;
     public string desc;
     public Sprite icon;
+    //public int quantity;
 
     [HideInInspector]
     public bool pickedUp;
@@ -19,15 +20,23 @@ public class Item : MonoBehaviour
     {
         if (equipped == true)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse1)) { 
-            
-            }
+            //if (ID==1) {
+
+                if (Input.GetKeyDown(KeyCode.Mouse1))
+                {
+                    //Debug.Log("Used");
+                }
+            //}
         }
     }
     public void itemUsage()
     {
 
         if (type == "Potion")
+        {
+            equipped = true;
+        }
+        if (type == "BigPotion")
         {
             equipped = true;
         }

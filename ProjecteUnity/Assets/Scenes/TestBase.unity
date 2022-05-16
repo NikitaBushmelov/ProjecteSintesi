@@ -29656,7 +29656,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 99999
+  m_Text: 0
 --- !u!222 &989144074
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -48804,6 +48804,7 @@ MonoBehaviour:
   type: Potion
   desc: Healing Potion
   icon: {fileID: 21300000, guid: 3fc1d3018c3370146b40470006100084, type: 3}
+  quantity: 0
   pickedUp: 0
   equipped: 0
 --- !u!61 &1626408427
@@ -58804,6 +58805,7 @@ MonoBehaviour:
   type: Potion
   desc: Healing Potion
   icon: {fileID: 21300000, guid: 3fc1d3018c3370146b40470006100084, type: 3}
+  quantity: 0
   pickedUp: 0
   equipped: 0
 --- !u!61 &1957290814
@@ -64016,6 +64018,10 @@ PrefabInstance:
     - target: {fileID: 2344785327696737443, guid: 33e47a950b8257043a6b34f1e52b6612, type: 3}
       propertyPath: m_Name
       value: pixil-frame-0 (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2344785327696737443, guid: 33e47a950b8257043a6b34f1e52b6612, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2344785327696737464, guid: 33e47a950b8257043a6b34f1e52b6612, type: 3}
       propertyPath: m_RootOrder
