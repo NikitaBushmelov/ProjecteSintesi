@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private float rotationSpeed;
     public int Health = 100;
+    public GameObject item;
 
     public GameObject deathEffect;
     public float speed;
@@ -25,8 +26,7 @@ public class Enemy : MonoBehaviour
     
      [SerializeField] public AudioSource controldisparo;
     public AudioClip sonidodisparo;
-    public AudioClip sonidoexplosion1;
-    public AudioSource controlexplosion1;
+   
 
     public void TakeDamage(int damage)
     {
@@ -35,6 +35,8 @@ public class Enemy : MonoBehaviour
         if (Health <= 0)
         {
             Die();
+            drop();
+            
         }
     }
     void Start()
@@ -47,16 +49,28 @@ public class Enemy : MonoBehaviour
     {
 
         Instantiate(deathEffect, transform.position, Quaternion.identity);
-        controlexplosion1.clip = sonidoexplosion1;
-        controlexplosion1.maxDistance = 100;
+        
+        
         Destroy(gameObject);
+
 
        
       
       
         
     }
-  
+  void drop(){
+        int rand=Random.Range(0,10);
+        if(rand==1){
+
+            Instantiate (item, transform.position, Quaternion.identity);
+
+        }
+       Debug.Log("el randm "+rand);
+       
+  }
+
+ 
    
 
     void Update ()

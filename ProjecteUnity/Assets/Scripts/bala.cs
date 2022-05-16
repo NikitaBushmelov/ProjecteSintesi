@@ -29,6 +29,8 @@ public class bala : MonoBehaviour
         Instantiate(impactEffect, transform.position, transform.rotation);
 
         Destroy(gameObject);
+        
        
     }
+   
 }
