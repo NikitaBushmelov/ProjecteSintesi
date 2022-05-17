@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    //inventory
     private bool invetoryEnabled;
     public GameObject inventory;
     private int allSlots;
@@ -13,6 +12,8 @@ public class Inventory : MonoBehaviour
     private GameObject[] slot;
     public int size;
     public GameObject slotHolder;
+    [HideInInspector]
+    public int pp, pg, gp, gm, gg;
     public void Start()
     {
         allSlots = slotHolder.transform.childCount;
@@ -28,7 +29,6 @@ public class Inventory : MonoBehaviour
     }
     public void Update()
     {
-        //inventory
         if (Input.GetKeyDown(KeyCode.I))
         {
             invetoryEnabled = !invetoryEnabled;
@@ -47,7 +47,6 @@ public class Inventory : MonoBehaviour
     {
         if (other.CompareTag("Item"))
         {
-            
             GameObject itemPickedUp = other.gameObject;
             Item item = itemPickedUp.GetComponent<Item>();
             AddItem(itemPickedUp, item.ID, item.type, item.desc, item.icon);
@@ -57,8 +56,15 @@ public class Inventory : MonoBehaviour
     {
         for (int c = 0; c < allSlots; c++)
         {
-            if (slot[c].GetComponent<Slot>().empty==false)
+            if (slot[c].GetComponent<Slot>().ID == itemID)
             {
+                itemObject.GetComponent<Item>().pickedUp = true;
+                itemObject.SetActive(false);
+                return;
+            }
+            if (slot[c].GetComponent<Slot>().empty == false)
+            {
+                
                 itemObject.GetComponent<Item>().pickedUp = true;
                 slot[c].GetComponent<Slot>().item = itemObject;
                 slot[c].GetComponent<Slot>().ID = itemID;
@@ -68,13 +74,11 @@ public class Inventory : MonoBehaviour
 
                 itemObject.transform.parent = slot[c].transform;
                 itemObject.SetActive(false);
-
                 slot[c].GetComponent<Slot>().updateSlot();
 
                 slot[c].GetComponent<Slot>().empty = true;
-
                 return;
-            }
+            }            
         }
 
     }

@@ -6,15 +6,9 @@ using UnityEngine.UI;
 
 public class FullScreen : MonoBehaviour
 {
-
-
     public Toggle toggle;
     public Dropdown resolucionesDropDown;
     Resolution[] resoluciones; 
-
-    
-
-
 
 
     void Start()

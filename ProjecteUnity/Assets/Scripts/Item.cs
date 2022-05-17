@@ -9,8 +9,6 @@ public class Item : MonoBehaviour
     public string type;
     public string desc;
     public Sprite icon;
-    //public int quantity;
-
     [HideInInspector]
     public bool pickedUp;
     [HideInInspector]
@@ -20,13 +18,8 @@ public class Item : MonoBehaviour
     {
         if (equipped == true)
         {
-            //if (ID==1) {
-
-                if (Input.GetKeyDown(KeyCode.Mouse1))
-                {
-                    //Debug.Log("Used");
-                }
-            //}
+            //es per 3D, per guardar al inventari per exemple
+            
         }
     }
     public void itemUsage()
@@ -34,23 +27,25 @@ public class Item : MonoBehaviour
 
         if (type == "Potion")
         {
-            equipped = true;
+            Debug.Log("Used");
+            
+            
         }
         if (type == "BigPotion")
         {
-            equipped = true;
+
         }
         if (type == "SmallGem")
         {
-            equipped = true;
+
         }
         if (type == "MediumGem")
         {
-            equipped = true;
+            
         }
         if (type == "BigGem")
         {
-            equipped = true;
+            
         }
     }
 }

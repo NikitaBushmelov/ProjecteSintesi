@@ -10,6 +10,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler
     public int ID;
     public string type;
     public string desc;
+    public int quantity;
     public bool empty;
     public Sprite icon;
     public Transform slotIcon;
@@ -20,7 +21,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler
     }
 
     public void updateSlot() {
-        slotIcon.GetComponent<Image>().sprite = icon;
+            slotIcon.GetComponent<Image>().sprite = icon;
     }
     public void useItem() {
         item.GetComponent<Item>().itemUsage();
@@ -28,6 +29,5 @@ public class Slot : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData pointerEventData)
     {
         useItem();
-
     }
 }
