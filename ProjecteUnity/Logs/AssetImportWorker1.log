@@ -1,0 +1,78 @@
+Using pre-set license
+Built from '2021.1/staging' branch; Version is '2021.1.3f1 (4bef613afd59) revision 4976481'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19043.1706; Version 2009; 64bit' Language: 'es' Physical Memory: 8047 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.1.3f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+C:/Users/bushm/OneDrive/Documents/GitHub/Projecte/ProjecteSintesi/ProjecteUnity
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+52413
+Successfully changed project path to: C:/Users/bushm/OneDrive/Documents/GitHub/Projecte/ProjecteSintesi/ProjecteUnity
+C:/Users/bushm/OneDrive/Documents/GitHub/Projecte/ProjecteSintesi/ProjecteUnity
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 90.90 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.1.3f1 (4bef613afd59)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.1.3f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/bushm/OneDrive/Documents/GitHub/Projecte/ProjecteSintesi/ProjecteUnity/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1050 Ti (ID=0x1c8c)
+    Vendor:   NVIDIA
+    VRAM:     4018 MB
+    Driver:   30.0.15.1277
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.1.3f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.1.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.1.3f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56440
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.3f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002235 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 91.75 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  6.762 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.003337 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 94.19 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.115 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.82 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3388 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 129.7 MB.
+System memory in use after: 129.8 MB.
+
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 3843.
+Total: 3.034800 ms (FindLiveObjects: 0.674200 ms CreateObjectMapping: 0.289000 ms MarkObjects: 1.952800 ms  DeleteObjects: 0.117700 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Prefabs/Canvas/Inventory.prefab
+  artifactKey: Guid(035494ead87008b499fe878878896e4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Canvas/Inventory.prefab using Guid(035494ead87008b499fe878878896e4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80d4498cd20ad71c410fa59195957a9d') in 0.102903 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

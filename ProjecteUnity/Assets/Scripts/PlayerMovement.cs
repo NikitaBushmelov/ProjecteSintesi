@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     public float speed;
     public int health;
-    public static int playerHealth;
+    public int playerHealth;
     public Text hpText;
     public Text MovementSpeed;
     public int dmg;
