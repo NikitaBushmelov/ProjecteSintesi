@@ -264,8 +264,9 @@ GameObject:
   - component: {fileID: 6449464137835392040}
   - component: {fileID: 6449464137835392041}
   - component: {fileID: 6449464137835392042}
+  - component: {fileID: 5045344932256385182}
   m_Layer: 0
-  m_Name: Enemic4
+  m_Name: enemic_camicaze
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -392,6 +393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 500
   Health: 100
+  item: {fileID: 0}
   deathEffect: {fileID: 1982281058133699012, guid: 95981fd1477106444a99ff7e92b2900b, type: 3}
   speed: 4
   dmg: 20
@@ -404,8 +406,6 @@ MonoBehaviour:
   isFlipped: 0
   controldisparo: {fileID: 6449464137835392041}
   sonidodisparo: {fileID: 8300000, guid: 8dda6b49e0fb0d04cb78dd665d593fb0, type: 3}
-  sonidoexplosion1: {fileID: 8300000, guid: 892a9ed7f47df9f41996439cedf676bf, type: 3}
-  controlexplosion1: {fileID: 6449464137835392042}
 --- !u!82 &6449464137835392041
 AudioSource:
   m_ObjectHideFlags: 0
@@ -513,7 +513,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 5780149073704156828, guid: 5f2d85567d824e94cb04fff16f8a8be4, type: 2}
   m_audioClip: {fileID: 8300000, guid: 892a9ed7f47df9f41996439cedf676bf, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -598,6 +598,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5045344932256385182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6449464137835392043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7d36797276a0e04193a8332f16282a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <PlayerDetected>k__BackingField: 0
+  detectorOrigin: {fileID: 0}
+  detectorSize: {x: 1, y: 1}
+  detectorOriginOffset: {x: 0, y: 0}
+  detectionDelay: 0.3
+  detectorLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  gizmoIdleColor: {r: 0, g: 1, b: 0, a: 1}
+  gizmoDetectedColor: {r: 1, g: 0, b: 0, a: 1}
+  showGizmos: 1
+  detect: 0
 --- !u!1 &8101875302488797136
 GameObject:
   m_ObjectHideFlags: 0
