@@ -24441,6 +24441,10 @@ PrefabInstance:
       propertyPath: startTimeBtwShots
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 408671103188463477, guid: 7f01991a28a60e74389d96e68cc8d687, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 408671103188463478, guid: 7f01991a28a60e74389d96e68cc8d687, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
@@ -31908,6 +31912,7 @@ MonoBehaviour:
   ID: 0
   type: 
   desc: 
+  quantity: 0
   empty: 0
   icon: {fileID: 0}
   slotIcon: {fileID: 0}
@@ -33294,6 +33299,7 @@ MonoBehaviour:
   ID: 0
   type: 
   desc: 
+  quantity: 0
   empty: 0
   icon: {fileID: 0}
   slotIcon: {fileID: 0}
@@ -36434,6 +36440,7 @@ MonoBehaviour:
   ID: 0
   type: 
   desc: 
+  quantity: 0
   empty: 0
   icon: {fileID: 0}
   slotIcon: {fileID: 0}
@@ -37322,6 +37329,7 @@ MonoBehaviour:
   ID: 0
   type: 
   desc: 
+  quantity: 0
   empty: 0
   icon: {fileID: 0}
   slotIcon: {fileID: 0}
@@ -43755,6 +43763,7 @@ MonoBehaviour:
   ID: 0
   type: 
   desc: 
+  quantity: 0
   empty: 0
   icon: {fileID: 0}
   slotIcon: {fileID: 0}
@@ -44399,6 +44408,7 @@ MonoBehaviour:
   ID: 0
   type: 
   desc: 
+  quantity: 0
   empty: 0
   icon: {fileID: 0}
   slotIcon: {fileID: 0}
@@ -47694,6 +47704,7 @@ MonoBehaviour:
   ID: 0
   type: 
   desc: 
+  quantity: 0
   empty: 0
   icon: {fileID: 0}
   slotIcon: {fileID: 0}
@@ -50910,6 +50921,7 @@ MonoBehaviour:
   ID: 0
   type: 
   desc: 
+  quantity: 0
   empty: 0
   icon: {fileID: 0}
   slotIcon: {fileID: 0}
@@ -64404,7 +64416,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8405468785630269848, guid: a4dc2a298a3fe6e448cec51d32296e20, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.86
+      value: -12.94
       objectReference: {fileID: 0}
     - target: {fileID: 8405468785630269848, guid: a4dc2a298a3fe6e448cec51d32296e20, type: 3}
       propertyPath: m_LocalPosition.z
@@ -64447,6 +64459,10 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8405468785630269853, guid: a4dc2a298a3fe6e448cec51d32296e20, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8405468785630269853, guid: a4dc2a298a3fe6e448cec51d32296e20, type: 3}
       propertyPath: hpText
       value: 
       objectReference: {fileID: 203677311}
@@ -64454,6 +64470,14 @@ PrefabInstance:
       propertyPath: AttackText
       value: 
       objectReference: {fileID: 2046078218}
+    - target: {fileID: 8405468785630269853, guid: a4dc2a298a3fe6e448cec51d32296e20, type: 3}
+      propertyPath: attackspeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8405468785630269853, guid: a4dc2a298a3fe6e448cec51d32296e20, type: 3}
+      propertyPath: playerHealth
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 8405468785630269853, guid: a4dc2a298a3fe6e448cec51d32296e20, type: 3}
       propertyPath: MovementSpeed
       value: 

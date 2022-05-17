@@ -19,7 +19,7 @@ public class DisparoJugador : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        tiempoEntreDisparos = this.GetComponent<PlayerMovement>().attackspeed;
     }
 
     // Update is called once per frame

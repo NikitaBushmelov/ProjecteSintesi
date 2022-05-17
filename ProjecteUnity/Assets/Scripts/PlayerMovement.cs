@@ -9,18 +9,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     public float speed;
     public int health;
-    public int playerHealth;
     public Text hpText;
     public Text MovementSpeed;
     public int dmg;
+    public float attackspeed;
 
-    private string healthPrefsName = "helath";
+    private string prefHP;
     
     private Portal userInterface;
-    
-
-    
-
     public Text AttackText;
 
     [SerializeField]
@@ -32,7 +28,6 @@ public class PlayerMovement : MonoBehaviour
     }
     void Start()
     {
-        //playerHealth = health;
         RefreshUI();
     }
 
@@ -75,6 +70,9 @@ public class PlayerMovement : MonoBehaviour
         
             health -= GameObject.FindGameObjectWithTag("enemy").GetComponent<Enemy>().dmg;
             hpText.text = "" + health;
+        if (health<=0) {
+            die();
+        }
         
     }
     public void OnTriggerEnter2D(Collider2D collision)
@@ -111,14 +109,17 @@ public class PlayerMovement : MonoBehaviour
     }
     private void SaveData()
     {
-        PlayerPrefs.SetInt(healthPrefsName,health);
-
+        PlayerPrefs.SetInt(prefHP,health);
 
     }
     private void LoadData()
     {
-        health = PlayerPrefs.GetInt(healthPrefsName,0);
+        health = PlayerPrefs.GetInt(prefHP, 0);
     }
-    
+    void die()
+    {
+        PlayerPrefs.SetInt(prefHP,health);
+        SceneManager.LoadScene("Lose");
+    }
 
 }
