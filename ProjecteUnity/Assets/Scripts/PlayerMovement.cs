@@ -14,6 +14,11 @@ public class PlayerMovement : MonoBehaviour
     public Text MovementSpeed;
     public int dmg;
 
+    private string healthPrefsName = "helath";
+    
+    private Portal userInterface;
+    
+
     
 
     public Text AttackText;
@@ -21,9 +26,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float rotationSpeed; 
     // Start is called before the first frame update
+
+    private void Awake(){
+        LoadData();
+    }
     void Start()
     {
-        playerHealth = health;
+        //playerHealth = health;
+        RefreshUI();
     }
 
     // Update is called once per frame
@@ -78,6 +88,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
+    private void RefreshUI()
+    {
+        hpText.text=health+"";
+        
+    }
     public void SavePlayer() {
         SaveSystem.SavePlayer(this);
     }
@@ -88,5 +103,22 @@ public class PlayerMovement : MonoBehaviour
         dmg = data.damage;
         health = data.health;
     }
+
+    private void OnDestroy() {
+
+        SaveData();
+        
+    }
+    private void SaveData()
+    {
+        PlayerPrefs.SetInt(healthPrefsName,health);
+
+
+    }
+    private void LoadData()
+    {
+        health = PlayerPrefs.GetInt(healthPrefsName,0);
+    }
+    
 
 }
