@@ -58,9 +58,37 @@ public class Inventory : MonoBehaviour
         {
             if (slot[c].GetComponent<Slot>().ID == itemID)
             {
-                itemObject.GetComponent<Item>().pickedUp = true;
-                itemObject.SetActive(false);
-                return;
+                //comparar id
+                pp++;
+                if (pp < 2)
+                {
+                    itemObject.GetComponent<Item>().pickedUp = true;
+                    itemObject.SetActive(false);
+                    return;
+                }
+                else {
+                    if (slot[c].GetComponent<Slot>().empty == false)
+                    {
+
+                        itemObject.GetComponent<Item>().pickedUp = true;
+                        slot[c].GetComponent<Slot>().item = itemObject;
+                        slot[c].GetComponent<Slot>().ID = itemID;
+                        slot[c].GetComponent<Slot>().type = itemType;
+                        slot[c].GetComponent<Slot>().desc = itemDesc;
+                        slot[c].GetComponent<Slot>().icon = itemIcon;
+
+                        itemObject.transform.parent = slot[c].transform;
+                        itemObject.SetActive(false);
+                        slot[c].GetComponent<Slot>().updateSlot();
+
+                        slot[c].GetComponent<Slot>().empty = true;
+                        return;
+                    }
+                }
+                if (pp==2) {
+                    pp = 0;
+                }
+                
             }
             if (slot[c].GetComponent<Slot>().empty == false)
             {

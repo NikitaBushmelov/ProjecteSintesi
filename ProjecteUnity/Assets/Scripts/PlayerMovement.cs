@@ -19,7 +19,10 @@ public class PlayerMovement : MonoBehaviour
     
     private Portal userInterface;
     public Text AttackText;
-public int c;
+    private int c;
+
+    private bool OptionsOn;
+    public GameObject Options;
     
 
     [SerializeField]
@@ -35,13 +38,28 @@ public int c;
     void Start()
     {
         RefreshUI();
-        Debug.Log(health);
-
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            OptionsOn = !OptionsOn;
+        }
+        if (OptionsOn == true)
+        {
+            Options.SetActive(true);
+        }
+        else
+        {
+            Options.SetActive(false);
+        }
+
+
+
+
+
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
