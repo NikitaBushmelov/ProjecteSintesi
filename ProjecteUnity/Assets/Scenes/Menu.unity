@@ -857,6 +857,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4718890427302578672, guid: 6b4bee35c692ab34cb66aad9771966c8, type: 3}
+      propertyPath: maxhealth
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4718890427653943128, guid: 6b4bee35c692ab34cb66aad9771966c8, type: 3}
       propertyPath: m_Name
       value: Main Panel
@@ -964,6 +968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd5fcd9a8f43cf4db98a387f60ec123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxhealth: 0
 --- !u!1001 &5466573516826058962
 PrefabInstance:
   m_ObjectHideFlags: 0

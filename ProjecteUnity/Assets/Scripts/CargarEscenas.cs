@@ -6,13 +6,17 @@ public class CargarEscenas : MonoBehaviour
 {
     // Start is called before the first frame update
     
+    
      public void CargarJuego()
     {
+        
         SceneManager.LoadScene("Lobby");
+    
     }
 
      public void Menu()
     {
+        
         SceneManager.LoadScene("Menu");
     }
      public void Exit()

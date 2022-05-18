@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     public float speed;
     public int health;
+    public int maxhealth=100;
     public Text hpText;
     public Text MovementSpeed;
     public int dmg;
@@ -18,17 +19,24 @@ public class PlayerMovement : MonoBehaviour
     
     private Portal userInterface;
     public Text AttackText;
+public int c;
+    
 
     [SerializeField]
     private float rotationSpeed; 
     // Start is called before the first frame update
 
     private void Awake(){
+      
         LoadData();
+        
+        
     }
     void Start()
     {
         RefreshUI();
+        Debug.Log(health);
+
     }
 
     // Update is called once per frame
@@ -53,7 +61,15 @@ public class PlayerMovement : MonoBehaviour
         //text
         movementText();
         dmgText();
+        if (health<=0) {
+            die();
+            c++;
+        }
+        if(c==1){
+            health=maxhealth;
+            c=0;
         
+        }
     }
     
     public void dmgText()
@@ -70,9 +86,7 @@ public class PlayerMovement : MonoBehaviour
         
             health -= GameObject.FindGameObjectWithTag("enemy").GetComponent<Enemy>().dmg;
             hpText.text = "" + health;
-        if (health<=0) {
-            die();
-        }
+        
         
     }
     public void OnTriggerEnter2D(Collider2D collision)
@@ -97,9 +111,6 @@ public class PlayerMovement : MonoBehaviour
     public void LoadPlayer()
     {
         PlayerData data= SaveSystem.LoadPlayer();
-        speed = data.speed;
-        dmg = data.damage;
-        health = data.health;
     }
 
     private void OnDestroy() {
@@ -114,11 +125,16 @@ public class PlayerMovement : MonoBehaviour
     }
     private void LoadData()
     {
+        
         health = PlayerPrefs.GetInt(prefHP, 0);
+         PlayerPrefs.SetInt(prefHP, health);
     }
     void die()
     {
-        PlayerPrefs.SetInt(prefHP,health);
+     
+        health=maxhealth;
+        //health = 100;
+        //PlayerPrefs.SetInt(prefHP, health);
         SceneManager.LoadScene("Lose");
     }
 
