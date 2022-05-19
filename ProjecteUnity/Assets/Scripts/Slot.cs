@@ -14,6 +14,8 @@ public class Slot : MonoBehaviour, IPointerClickHandler
     public bool empty;
     public Sprite icon;
     public Transform slotIcon;
+    public Text slotText;
+    public bool ple;
 
     private void Start()
     {

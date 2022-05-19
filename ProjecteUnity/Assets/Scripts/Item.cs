@@ -12,14 +12,17 @@ public class Item : MonoBehaviour
     [HideInInspector]
     public bool pickedUp;
     [HideInInspector]
-    public bool equipped;
-
+    public bool use;
+    private GameObject player;
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
     private void Update()
     {
-        if (equipped == true)
+        if (use == true)
         {
             //es per 3D, per guardar al inventari per exemple
-            
         }
     }
     public void itemUsage()
@@ -27,25 +30,22 @@ public class Item : MonoBehaviour
 
         if (type == "Potion")
         {
-            Debug.Log("Used");
-            
+            if (player.GetComponent<PlayerMovement>().health< player.GetComponent<PlayerMovement>().maxhealth) {
+                player.GetComponent<PlayerMovement>().health += 25;
+                player.GetComponent<PlayerMovement>().hpText.text = player.GetComponent<PlayerMovement>().health+"";
+                //GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>().
+                if (GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().health > GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().maxhealth) {
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().health = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().maxhealth;
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().hpText.text = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().health + "";
+                }
+            } 
             
         }
         if (type == "BigPotion")
         {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().health += 50;
 
         }
-        if (type == "SmallGem")
-        {
-
-        }
-        if (type == "MediumGem")
-        {
-            
-        }
-        if (type == "BigGem")
-        {
-            
-        }
+        
     }
 }
