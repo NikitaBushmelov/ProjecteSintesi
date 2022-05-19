@@ -24,6 +24,8 @@ public class Enemy : MonoBehaviour
     private Vector2 target;
     public bool isFlipped;
 
+    public bool camicaze;
+
     [SerializeField] public AudioSource controldisparo;
     public AudioClip sonidodisparo;
 
@@ -42,6 +44,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player").transform;
+
     }
     // Update is called once per frame
 
@@ -52,9 +55,6 @@ public class Enemy : MonoBehaviour
 
 
         Destroy(gameObject);
-
-
-
 
 
 
@@ -165,12 +165,19 @@ public class Enemy : MonoBehaviour
     }
     public void OnCollisionEnter2D(Collision2D col)
     {
+        if(camicaze==true){
+
         if (col.gameObject.tag == "Player")
         {
+            
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().TakeDamage();
             Debug.Log("Is hurt");
+            Die();
 
 
         }
+        }
+        
 
     }
 

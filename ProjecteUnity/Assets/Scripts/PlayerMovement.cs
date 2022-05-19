@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
         LoadData();
         
         
+        
     }
     void Start()
     {
@@ -55,8 +56,6 @@ public class PlayerMovement : MonoBehaviour
         {
             Options.SetActive(false);
         }
-
-
 
 
 
@@ -125,10 +124,12 @@ public class PlayerMovement : MonoBehaviour
     }
     public void SavePlayer() {
         SaveSystem.SavePlayer(this);
+        
     }
     public void LoadPlayer()
     {
         PlayerData data= SaveSystem.LoadPlayer();
+        
     }
 
     private void OnDestroy() {
@@ -139,6 +140,7 @@ public class PlayerMovement : MonoBehaviour
     private void SaveData()
     {
         PlayerPrefs.SetInt(prefHP,health);
+       
 
     }
     private void LoadData()
@@ -146,6 +148,7 @@ public class PlayerMovement : MonoBehaviour
         
         health = PlayerPrefs.GetInt(prefHP, 0);
          PlayerPrefs.SetInt(prefHP, health);
+         
     }
     void die()
     {
