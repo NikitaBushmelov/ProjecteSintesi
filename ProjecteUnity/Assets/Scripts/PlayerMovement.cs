@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     public Text AttackText;
     private int c;
 
-    private bool OptionsOn;
+    public bool OptionsOn;
     public GameObject Options;
     
 
@@ -44,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //opcions
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             OptionsOn = !OptionsOn;
@@ -51,29 +52,32 @@ public class PlayerMovement : MonoBehaviour
         if (OptionsOn == true)
         {
             Options.SetActive(true);
+            Time.timeScale = 0.0f;
         }
         else
         {
+            Time.timeScale = 1.0f;
             Options.SetActive(false);
         }
-
-
-
+        if (GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>().invetoryEnabled == true && OptionsOn==true) {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>().invetoryEnabled = false;
+            
+        }
+        if (GameObject.FindGameObjectWithTag("Maquina").GetComponent<OpenShop>().obert==true && OptionsOn == true)
+        {
+            GameObject.FindGameObjectWithTag("Maquina").GetComponent<OpenShop>().canvas.SetActive(false);
+            GameObject.FindGameObjectWithTag("Maquina").GetComponent<OpenShop>().abrir = false;
+        }
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
-
         Vector2 movementDirection = new Vector2(horizontalInput, verticalInput);
         float inputMagnitude = Mathf.Clamp01(movementDirection.magnitude);
         movementDirection.Normalize();
-
         transform.Translate(movementDirection * speed * inputMagnitude * Time.deltaTime, Space.World);
-
         if (movementDirection != Vector2.zero)
         {
             Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, movementDirection);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
-
-
         }
         //text
         movementText();
@@ -85,26 +89,20 @@ public class PlayerMovement : MonoBehaviour
         if(c==1){
             health=maxhealth;
             c=0;
-        
         }
     }
-    
     public void dmgText()
     {
         AttackText.text = "" + dmg;
     }
-
     public void movementText() 
     {
         float v = speed;
         MovementSpeed.text = "" + v;
     }
-    public void TakeDamage() {
-        
+    public void TakeDamage() { 
             health -= GameObject.FindGameObjectWithTag("enemy").GetComponent<Enemy>().dmg;
             hpText.text = "" + health;
-        
-        
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -115,48 +113,35 @@ public class PlayerMovement : MonoBehaviour
         {
             SceneManager.LoadScene("TestMap");
         }
-
     }
     private void RefreshUI()
     {
         hpText.text=health+"";
-        
     }
     public void SavePlayer() {
         SaveSystem.SavePlayer(this);
-        
     }
     public void LoadPlayer()
     {
-        PlayerData data= SaveSystem.LoadPlayer();
-        
+        PlayerData data= SaveSystem.LoadPlayer(); 
     }
-
     private void OnDestroy() {
-
         SaveData();
-        
     }
     private void SaveData()
     {
         PlayerPrefs.SetInt(prefHP,health);
-       
-
     }
     private void LoadData()
     {
-        
         health = PlayerPrefs.GetInt(prefHP, 0);
-         PlayerPrefs.SetInt(prefHP, health);
-         
+        PlayerPrefs.SetInt(prefHP, health);
     }
     void die()
     {
-     
         health=maxhealth;
         //health = 100;
         //PlayerPrefs.SetInt(prefHP, health);
         SceneManager.LoadScene("Lose");
     }
-
 }

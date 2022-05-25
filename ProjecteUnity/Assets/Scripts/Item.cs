@@ -33,7 +33,22 @@ public class Item : MonoBehaviour
             {
                 player.GetComponent<PlayerMovement>().health += 25;
                 player.GetComponent<PlayerMovement>().hpText.text = player.GetComponent<PlayerMovement>().health + "";
-                //GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>().
+                if (player.GetComponent<PlayerMovement>().health > player.GetComponent<PlayerMovement>().maxhealth)
+                {
+                    player.GetComponent<PlayerMovement>().health = player.GetComponent<PlayerMovement>().maxhealth;
+                    player.GetComponent<PlayerMovement>().hpText.text = player.GetComponent<PlayerMovement>().health + "";
+
+                    player.GetComponent<Inventory>().removeItem(slot);
+                }
+                player.GetComponent<Inventory>().removeItem(slot);
+            }
+        }
+        if (type == "BigPotion")
+        {
+            if (player.GetComponent<PlayerMovement>().health < player.GetComponent<PlayerMovement>().maxhealth)
+            {
+                player.GetComponent<PlayerMovement>().health += 50;
+                player.GetComponent<PlayerMovement>().hpText.text = player.GetComponent<PlayerMovement>().health + "";
                 if (player.GetComponent<PlayerMovement>().health > player.GetComponent<PlayerMovement>().maxhealth)
                 {
                     player.GetComponent<PlayerMovement>().health = player.GetComponent<PlayerMovement>().maxhealth;
@@ -44,14 +59,7 @@ public class Item : MonoBehaviour
 
                 player.GetComponent<Inventory>().removeItem(slot);
             }
-        }
-        
-       
-        if (type == "BigPotion")
-        {
-            player.GetComponent<PlayerMovement>().health += 50;
 
         }
-        
     }
 }

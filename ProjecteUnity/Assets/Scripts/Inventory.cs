@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    private bool invetoryEnabled;
+    public bool invetoryEnabled;
     public GameObject inventory;
     private int allSlots;
     private int EnabledSlots;
@@ -30,7 +30,7 @@ public class Inventory : MonoBehaviour
     }
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I)&& GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().OptionsOn==false)
         {
             invetoryEnabled = !invetoryEnabled;
         }

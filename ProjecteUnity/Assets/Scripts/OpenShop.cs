@@ -10,6 +10,7 @@ public class OpenShop : MonoBehaviour
     public bool puedeAbrir;
     public bool abrir;
     public GameObject canvas;
+    public bool obert;
     //public GameObject gameObjectToDesactivate;
 
 
@@ -22,19 +23,19 @@ public class OpenShop : MonoBehaviour
     void Update()
     {
        
-        if (Input.GetButtonDown("e") && puedeAbrir == true && abrir == false)
+        if (Input.GetButtonDown("e") && puedeAbrir == true && abrir == false && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().OptionsOn == false)
         {          
             abrir = true;
             //gameObjectToDesactivate.SetActive(false);
             canvas.SetActive(true);
-            
+            obert = true;
         }
         else if (Input.GetButtonDown("e") && puedeAbrir == true && abrir == true)
         {
             abrir = false;
             //gameObjectToDesactivate.SetActive(true);
             canvas.SetActive(false);
-
+            obert = false;
         }
     }
     void OnTriggerStay2D(Collider2D other)
