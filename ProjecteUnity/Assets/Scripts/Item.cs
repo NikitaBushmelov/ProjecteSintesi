@@ -25,27 +25,41 @@ public class Item : MonoBehaviour
             //es per 3D, per guardar al inventari per exemple
         }
     }
-    public void itemUsage()
+    public void itemUsage(Slot slot)
     {
-
         if (type == "Potion")
         {
-            if (player.GetComponent<PlayerMovement>().health< player.GetComponent<PlayerMovement>().maxhealth) {
+            if (player.GetComponent<PlayerMovement>().health < player.GetComponent<PlayerMovement>().maxhealth)
+            {
                 player.GetComponent<PlayerMovement>().health += 25;
-                player.GetComponent<PlayerMovement>().hpText.text = player.GetComponent<PlayerMovement>().health+"";
-                //GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>().
-                if (GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().health > GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().maxhealth) {
-                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().health = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().maxhealth;
-                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().hpText.text = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().health + "";
+                player.GetComponent<PlayerMovement>().hpText.text = player.GetComponent<PlayerMovement>().health + "";
+                if (player.GetComponent<PlayerMovement>().health > player.GetComponent<PlayerMovement>().maxhealth)
+                {
+                    player.GetComponent<PlayerMovement>().health = player.GetComponent<PlayerMovement>().maxhealth;
+                    player.GetComponent<PlayerMovement>().hpText.text = player.GetComponent<PlayerMovement>().health + "";
+
+                    player.GetComponent<Inventory>().removeItem(slot);
                 }
-            } 
-            
+                player.GetComponent<Inventory>().removeItem(slot);
+            }
         }
         if (type == "BigPotion")
         {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().health += 50;
+            if (player.GetComponent<PlayerMovement>().health < player.GetComponent<PlayerMovement>().maxhealth)
+            {
+                player.GetComponent<PlayerMovement>().health += 50;
+                player.GetComponent<PlayerMovement>().hpText.text = player.GetComponent<PlayerMovement>().health + "";
+                if (player.GetComponent<PlayerMovement>().health > player.GetComponent<PlayerMovement>().maxhealth)
+                {
+                    player.GetComponent<PlayerMovement>().health = player.GetComponent<PlayerMovement>().maxhealth;
+                    player.GetComponent<PlayerMovement>().hpText.text = player.GetComponent<PlayerMovement>().health + "";
+
+                    player.GetComponent<Inventory>().removeItem(slot);
+                }
+
+                player.GetComponent<Inventory>().removeItem(slot);
+            }
 
         }
-        
     }
 }

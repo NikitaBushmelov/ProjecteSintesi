@@ -7,8 +7,9 @@ public class CameraFollow : MonoBehaviour
     public Transform target;
     public Vector3 offset;
     [Range(1,10)]
-    public float smoothFactor=1;
+    public float smoothFactor=3.75f;
 
+    
     private void FixedUpdate()
     {
         Follow();

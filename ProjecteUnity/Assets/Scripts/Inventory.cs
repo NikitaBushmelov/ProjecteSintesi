@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    private bool invetoryEnabled;
+    public bool invetoryEnabled;
     public GameObject inventory;
-    private int allSlots;
+    public int allSlots;
     private int EnabledSlots;
-    private GameObject[] slot;
+    public GameObject[] slot;
     public int size;
     public GameObject slotHolder;
     [HideInInspector]
@@ -30,7 +30,7 @@ public class Inventory : MonoBehaviour
     }
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I)&& GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().OptionsOn==false)
         {
             invetoryEnabled = !invetoryEnabled;
         }
@@ -43,7 +43,6 @@ public class Inventory : MonoBehaviour
             inventory.SetActive(false);
         }
     }
-
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Item"))
@@ -68,6 +67,7 @@ public class Inventory : MonoBehaviour
                         itemObject.transform.parent = slot[c].transform;
                         itemObject.SetActive(false);
                         slot[c].GetComponent<Slot>().slotText.text = pp+"";
+                        slot[c].GetComponent<Slot>().quantity = pp;
                         return;
                     }
                     else
@@ -94,6 +94,7 @@ public class Inventory : MonoBehaviour
                         itemObject.transform.parent = slot[c].transform;
                         itemObject.SetActive(false);
                         slot[c].GetComponent<Slot>().slotText.text = pg + "";
+                        slot[c].GetComponent<Slot>().quantity = pg;
                         return;
                     }
                     else
@@ -121,6 +122,7 @@ public class Inventory : MonoBehaviour
                         itemObject.transform.parent = slot[c].transform;
                         itemObject.SetActive(false);
                         slot[c].GetComponent<Slot>().slotText.text = gp + "";
+                        slot[c].GetComponent<Slot>().quantity = gp;
                         return;
                     }
                     else
@@ -148,6 +150,7 @@ public class Inventory : MonoBehaviour
                         itemObject.transform.parent = slot[c].transform;
                         itemObject.SetActive(false);
                         slot[c].GetComponent<Slot>().slotText.text = gm + "";
+                        slot[c].GetComponent<Slot>().quantity = gm;
                         return;
                     }
                     else
@@ -175,6 +178,7 @@ public class Inventory : MonoBehaviour
                         itemObject.transform.parent = slot[c].transform;
                         itemObject.SetActive(false);
                         slot[c].GetComponent<Slot>().slotText.text = gg + "";
+                        slot[c].GetComponent<Slot>().quantity = gg;
                         return;
                     }
                     else
@@ -202,6 +206,7 @@ public class Inventory : MonoBehaviour
 
                 itemObject.transform.parent = slot[c].transform;
                 itemObject.SetActive(false);
+                
                 slot[c].GetComponent<Slot>().updateSlot();
 
                 if (itemID == 1 && pp2==0)
@@ -209,36 +214,71 @@ public class Inventory : MonoBehaviour
                     slot[c].GetComponent<Slot>().slotText.text = 1 + "";
                     pp++;
                     pp2 = 1;
+                    slot[c].GetComponent<Slot>().quantity = pp;
                 }
                 if (itemID == 2 && pg2 == 0)
                 {
                     slot[c].GetComponent<Slot>().slotText.text = 1 + "";
                     pg++;
                     pg2 = 1;
+                    slot[c].GetComponent<Slot>().quantity = pg;
                 }
                 if (itemID == 3 && gp2 == 0)
                 {
                     slot[c].GetComponent<Slot>().slotText.text = 1 + "";
                     gp++;
                     gp2 = 1;
+                    slot[c].GetComponent<Slot>().quantity = gp;
                 }
                 if (itemID == 4 && gm2 == 0)
                 {
                     slot[c].GetComponent<Slot>().slotText.text = 1 + "";
                     gm++;
                     gm2 = 1;
-                }
+                    slot[c].GetComponent<Slot>().quantity = gm;
+                } 
                 if (itemID == 5 && gg2 == 0)
                 {
                     slot[c].GetComponent<Slot>().slotText.text = 1 + "";
                     gg++;
                     gg2 = 1;
+                    slot[c].GetComponent<Slot>().quantity = gg;
                 }
                 slot[c].GetComponent<Slot>().empty = true;
                 return;
 
             }            
         }
+    }
+    public void removeItem(Slot s)
+    {
+        for (int c = 0; c < slot.Length; c++)
+        {            
+            if (slot[c].GetComponent<Slot>().ID == s.ID && slot[c].GetComponent<Slot>().quantity > 0){
+                slot[c].GetComponent<Slot>().quantity = slot[c].GetComponent<Slot>().quantity - 1;
+                slot[c].GetComponent<Slot>().slotText.text = slot[c].GetComponent<Slot>().quantity + "";
+                pp--;
+                pg--;
+                gp--;
+                gm--;
+                gg--;
+                if (slot[c].GetComponent<Slot>().quantity == 0)
+                {
+                    pp2 = 0;
+                    pg2 = 0;
+                    gp2 = 0;
+                    gm2 = 0;
+                    gg2 = 0;
+                    slot[c].GetComponent<Slot>().item = null;
+                     slot[c].GetComponent<Slot>().ID = 0;
+                     slot[c].GetComponent<Slot>().type = null;
+                     slot[c].GetComponent<Slot>().desc = null;
+                     slot[c].GetComponent<Slot>().icon = null;
+                     slot[c].GetComponent<Slot>().empty = false;
+                     slot[c].GetComponent<Slot>().updateIcon();
+                }
+            }
 
+        }
     }
 }

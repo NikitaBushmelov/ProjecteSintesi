@@ -9,7 +9,7 @@ public class UpgradeButtton : MonoBehaviour
     public Text monedes;
     private string quantitatMonedes;
     private int qm;
-    int c = 1;
+    int cmh = 1,cas=1,cms=1,cdm=1;
 
     public Text preu;
     private string quantitatPreu;
@@ -29,7 +29,6 @@ public class UpgradeButtton : MonoBehaviour
     void Update()
     {
         if (!preu.text.Equals("Max")) {
-
             quantitatMonedes = monedes.text;
             qm = int.Parse(quantitatMonedes);
             quantitatPreu = preu.text;
@@ -44,11 +43,11 @@ public class UpgradeButtton : MonoBehaviour
             if (qm >= preuStandart)
             {
                 
-                if (c<4) {
-                    c++;
+                if (cmh<4) {
+                    cmh++;
                     int resta = qm - preuStandart;
                     monedes.text = resta + "";
-                    int cost = preuStandart * c;
+                    int cost = preuStandart * cmh;
                     preuStandart = cost;
                     preu.text = cost + "";
                     
@@ -56,7 +55,7 @@ public class UpgradeButtton : MonoBehaviour
                     PlayerPrefs.SetInt("prefHP", 150);
                     GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().health += 50;
                 }
-                if (c==4) {
+                if (cmh == 4) {
                     preu.text ="Max";
                 }
             }
@@ -65,16 +64,16 @@ public class UpgradeButtton : MonoBehaviour
         {
             if (qm >= preuStandart)
             {
-                if (c < 4)
+                if (cas < 4)
                 {
-                    c++;
+                    cas++;
                     int resta = qm - preuStandart;
                     monedes.text = resta + "";
-                    int cost = preuStandart * c;
+                    int cost = preuStandart * cas;
                     preuStandart = cost;
                     preu.text = cost + "";
                 }
-                if (c == 4)
+                if (cas == 4)
                 {
                     preu.text = "Max";
                 }
@@ -84,16 +83,16 @@ public class UpgradeButtton : MonoBehaviour
         {
             if (qm >= preuStandart)
             {
-                if (c < 4)
+                if (cms < 4)
                 {
-                    c++;
+                    cms++;
                     int resta = qm - preuStandart;
                     monedes.text = resta + "";
-                    int cost = preuStandart * c;
+                    int cost = preuStandart * cms;
                     preuStandart = cost;
                     preu.text = cost + "";
                 }
-                if (c == 4)
+                if (cms == 4)
                 {
                     preu.text = "Max";
                 }
@@ -103,16 +102,16 @@ public class UpgradeButtton : MonoBehaviour
         {
             if (qm >= preuStandart)
             {
-                if (c < 4)
+                if (cdm < 4)
                 {
-                    c++;
+                    cdm++;
                     int resta = qm - preuStandart;
                     monedes.text = resta + "";
-                    int cost = preuStandart * c;
+                    int cost = preuStandart * cdm;
                     preuStandart = cost;
                     preu.text = cost + "";
                 }
-                if (c == 4)
+                if (cdm == 4)
                 {
                     preu.text = "Max";
                 }
