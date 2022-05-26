@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     
     private Portal userInterface;
     public Text AttackText;
+    public Text Monedes;
     private int c;
 
     public bool OptionsOn;
@@ -136,11 +137,13 @@ public class PlayerMovement : MonoBehaviour
     private void SaveData()
     {
         PlayerPrefs.SetInt(prefHP,health);
+        PlayerPrefs.SetString("monedes",Monedes.text);
     }
     private void LoadData()
     {
         health = PlayerPrefs.GetInt(prefHP, 0);
-        PlayerPrefs.SetInt(prefHP, health);
+        //PlayerPrefs.SetInt(prefHP, health);
+        Monedes.text = PlayerPrefs.GetString("monedes");
     }
     void die()
     {
