@@ -146,18 +146,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 500
-  Health: 100
+  Health: 140
   item: {fileID: 0}
+  item1: {fileID: 0}
+  item2: {fileID: 0}
+  item3: {fileID: 0}
+  item4: {fileID: 0}
   deathEffect: {fileID: 1982281058133699012, guid: 95981fd1477106444a99ff7e92b2900b, type: 3}
   speed: 4
-  dmg: 20
+  dmg: 40
   stoppingDistance: 7
   retreatDistance: 4
-  startTimeBtwShots: 2
+  startTimeBtwShots: 1.5
   projectile: {fileID: 3336483869663993881, guid: c2cbe737e9a33884cb66f4d554d4564c, type: 3}
   Player: {fileID: 0}
   shoots: 1
   isFlipped: 0
+  camicaze: 0
   controldisparo: {fileID: 448457153712274216}
   sonidodisparo: {fileID: 8300000, guid: 8dda6b49e0fb0d04cb78dd665d593fb0, type: 3}
 --- !u!82 &448457153712274216
