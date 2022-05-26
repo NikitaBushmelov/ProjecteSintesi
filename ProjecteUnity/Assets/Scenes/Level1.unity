@@ -1033,11 +1033,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6970310616538996161, guid: 1357ed2b6e25e1c4ba3a19dbcf7c0b70, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.236544
+      value: -3.29
       objectReference: {fileID: 0}
     - target: {fileID: 6970310616538996161, guid: 1357ed2b6e25e1c4ba3a19dbcf7c0b70, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.6362865
+      value: -10.06
       objectReference: {fileID: 0}
     - target: {fileID: 6970310616538996161, guid: 1357ed2b6e25e1c4ba3a19dbcf7c0b70, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1085,7 +1085,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6970310616538996190, guid: 1357ed2b6e25e1c4ba3a19dbcf7c0b70, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8907756925431253901, guid: 1357ed2b6e25e1c4ba3a19dbcf7c0b70, type: 3}
       propertyPath: m_Layer
@@ -1918,6 +1918,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1492739968}
     - target: {fileID: 8405468785630269853, guid: a4dc2a298a3fe6e448cec51d32296e20, type: 3}
+      propertyPath: Monedes
+      value: 
+      objectReference: {fileID: 1172498242}
+    - target: {fileID: 8405468785630269853, guid: a4dc2a298a3fe6e448cec51d32296e20, type: 3}
       propertyPath: Options
       value: 
       objectReference: {fileID: 1585461668}
@@ -2190,6 +2194,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a54442268c0a40c4ebc532fb71d22f88, type: 3}
+--- !u!114 &1172498242 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 704177067925440516, guid: a54442268c0a40c4ebc532fb71d22f88, type: 3}
+  m_PrefabInstance: {fileID: 1172498241}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1177760921 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1722126241925591761, guid: 035494ead87008b499fe878878896e4c, type: 3}

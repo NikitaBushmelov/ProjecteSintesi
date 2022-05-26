@@ -281,4 +281,19 @@ public class Inventory : MonoBehaviour
 
         }
     }
+    private void OnDestroy()
+    {
+        SaveData();
+    }
+    private void SaveData()
+    {
+        //PlayerPrefs
+        //posicio
+        //id
+        //quantitat
+    }
+    private void LoadData()
+    {
+        //playerprefs
+    }
 }
