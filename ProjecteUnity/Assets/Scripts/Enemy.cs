@@ -66,17 +66,17 @@ public class Enemy : MonoBehaviour
     }
     void drop()
     {
-        int rand = Random.Range(0, 10);
-        if (rand == 1)
+        int rand = Random.Range(0, 25);
+        if (rand == 24)
         {
             Instantiate(item, transform.position, Quaternion.identity); 
         }if (rand ==2){
                Instantiate(item1, transform.position, Quaternion.identity);
-        }if (rand ==7){
+        }if (rand ==12){
                Instantiate(item2, transform.position, Quaternion.identity);
-        }if (rand ==8){
+        }if (rand ==18){
                Instantiate(item3, transform.position, Quaternion.identity);
-        }if (rand ==9){
+        }if (rand ==6){
                Instantiate(item4, transform.position, Quaternion.identity);
         }
         Debug.Log("el randm " + rand);

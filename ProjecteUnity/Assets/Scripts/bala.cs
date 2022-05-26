@@ -23,12 +23,33 @@ public class bala : MonoBehaviour
         Enemy enemy = col.GetComponent<Enemy>();
         if (enemy != null)
         {
-            enemy.TakeDamage(damage);
+            enemy.TakeDamage(damage); 
+            Instantiate(impactEffect, transform.position, transform.rotation);
+            Destroy(gameObject);
         }
+        
+          if (col.gameObject.CompareTag("Paret"))
+          {
+              Instantiate(impactEffect, transform.position, transform.rotation);
+                Destroy(gameObject);
+               
+          }
+          if (col.gameObject.CompareTag("laser"))
+          {
+             Instantiate(impactEffect, transform.position, transform.rotation);
+               Destroy(gameObject);
+               
+          }
+          if (col.gameObject.CompareTag("bala"))
+          {
+              Instantiate(impactEffect, transform.position, transform.rotation);
+                Destroy(gameObject);
+              
+          }
 
-        Instantiate(impactEffect, transform.position, transform.rotation);
+        
 
-        Destroy(gameObject);
+       
         
        
     }
