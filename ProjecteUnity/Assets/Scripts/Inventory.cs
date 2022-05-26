@@ -7,7 +7,7 @@ public class Inventory : MonoBehaviour
 {
     public bool invetoryEnabled;
     public GameObject inventory;
-    private int allSlots;
+    public int allSlots;
     private int EnabledSlots;
     public GameObject[] slot;
     public int size;
@@ -94,6 +94,7 @@ public class Inventory : MonoBehaviour
                         itemObject.transform.parent = slot[c].transform;
                         itemObject.SetActive(false);
                         slot[c].GetComponent<Slot>().slotText.text = pg + "";
+                        slot[c].GetComponent<Slot>().quantity = pg;
                         return;
                     }
                     else
@@ -121,6 +122,7 @@ public class Inventory : MonoBehaviour
                         itemObject.transform.parent = slot[c].transform;
                         itemObject.SetActive(false);
                         slot[c].GetComponent<Slot>().slotText.text = gp + "";
+                        slot[c].GetComponent<Slot>().quantity = gp;
                         return;
                     }
                     else
@@ -148,6 +150,7 @@ public class Inventory : MonoBehaviour
                         itemObject.transform.parent = slot[c].transform;
                         itemObject.SetActive(false);
                         slot[c].GetComponent<Slot>().slotText.text = gm + "";
+                        slot[c].GetComponent<Slot>().quantity = gm;
                         return;
                     }
                     else
@@ -175,6 +178,7 @@ public class Inventory : MonoBehaviour
                         itemObject.transform.parent = slot[c].transform;
                         itemObject.SetActive(false);
                         slot[c].GetComponent<Slot>().slotText.text = gg + "";
+                        slot[c].GetComponent<Slot>().quantity = gg;
                         return;
                     }
                     else
@@ -248,7 +252,6 @@ public class Inventory : MonoBehaviour
     }
     public void removeItem(Slot s)
     {
-        Debug.Log(slot[0].GetComponent<Slot>().icon);
         for (int c = 0; c < slot.Length; c++)
         {            
             if (slot[c].GetComponent<Slot>().ID == s.ID && slot[c].GetComponent<Slot>().quantity > 0){

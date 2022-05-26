@@ -19,22 +19,17 @@ public class Slot : MonoBehaviour, IPointerClickHandler
     public Text slotText;
     public bool ple;
     
-
     public event Action<Slot> OnItemClicked;
-
     private void Start()
     {
         slotIcon = transform.GetChild(0);
         slotIcon2 = transform.GetChild(1);
-        Debug.Log(slotIcon.GetComponent<Image>().sprite);
     }
-
     public void updateSlot() {
             slotIcon.GetComponent<Image>().sprite = icon;
     }
     public void updateIcon() {
         slotIcon.GetComponent<Image>().sprite = slotIcon2.GetComponent<Image>().sprite;
-    
     }
     public void useItem() {
         if (item == null)
@@ -47,9 +42,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler
     }
     public void OnPointerClick(PointerEventData pointerEventData)
     {
-        
             useItem();
-        
     }
 }
 

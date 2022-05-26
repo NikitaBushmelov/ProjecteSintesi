@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool OptionsOn;
     public GameObject Options;
-    
+    string sceneName;
 
     [SerializeField]
     private float rotationSpeed; 
@@ -39,6 +39,8 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         RefreshUI();
+        Scene currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
     }
 
     // Update is called once per frame
@@ -63,11 +65,14 @@ public class PlayerMovement : MonoBehaviour
             GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>().invetoryEnabled = false;
             
         }
-        if (GameObject.FindGameObjectWithTag("Maquina").GetComponent<OpenShop>().obert==true && OptionsOn == true)
-        {
-            GameObject.FindGameObjectWithTag("Maquina").GetComponent<OpenShop>().canvas.SetActive(false);
-            GameObject.FindGameObjectWithTag("Maquina").GetComponent<OpenShop>().abrir = false;
+        if (sceneName=="Lobby") {
+            if (GameObject.FindGameObjectWithTag("Maquina").GetComponent<OpenShop>().obert == true && OptionsOn == true)
+            {
+                GameObject.FindGameObjectWithTag("Maquina").GetComponent<OpenShop>().canvas.SetActive(false);
+                GameObject.FindGameObjectWithTag("Maquina").GetComponent<OpenShop>().abrir = false;
+            }
         }
+        
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
         Vector2 movementDirection = new Vector2(horizontalInput, verticalInput);
