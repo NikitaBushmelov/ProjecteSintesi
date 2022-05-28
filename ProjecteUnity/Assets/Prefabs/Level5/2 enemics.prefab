@@ -1,5 +1,43 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &7829144310883290470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872908700011516070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7d36797276a0e04193a8332f16282a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <PlayerDetected>k__BackingField: 0
+  detectorOrigin: {fileID: 872908700011516089}
+  detectorSize: {x: 15.59, y: 7.3}
+  detectorOriginOffset: {x: -0.04, y: 0}
+  detectionDelay: 0.3
+  detectorLayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  gizmoIdleColor: {r: 0, g: 1, b: 0, a: 0.16470589}
+  gizmoDetectedColor: {r: 1, g: 0, b: 0, a: 0.2627451}
+  showGizmos: 1
+  detect: 0
+--- !u!114 &7829144310883290478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872908700011516070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e46fcb338ee131a49a2529b88f4f7b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <PlayerInArea>k__BackingField: 0
+  detectionTag: Player
 --- !u!114 &7829144310654254696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26,7 +64,7 @@ GameObject:
   - component: {fileID: 7829144310727494644}
   - component: {fileID: 7829144310727494642}
   m_Layer: 0
-  m_Name: Zona1
+  m_Name: 2 enemics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -91,44 +129,6 @@ MonoBehaviour:
   enemy4: {fileID: 0}
   enemy5: {fileID: 0}
   enemy6: {fileID: 0}
---- !u!114 &7829144310883290470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 872908700011516070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7d36797276a0e04193a8332f16282a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <PlayerDetected>k__BackingField: 0
-  detectorOrigin: {fileID: 872908700011516089}
-  detectorSize: {x: 15.59, y: 7.3}
-  detectorOriginOffset: {x: -0.04, y: 0}
-  detectionDelay: 0.3
-  detectorLayerMask:
-    serializedVersion: 2
-    m_Bits: 8
-  gizmoIdleColor: {r: 0, g: 1, b: 0, a: 0.16470589}
-  gizmoDetectedColor: {r: 1, g: 0, b: 0, a: 0.2627451}
-  showGizmos: 1
-  detect: 0
---- !u!114 &7829144310883290478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 872908700011516070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e46fcb338ee131a49a2529b88f4f7b10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <PlayerInArea>k__BackingField: 0
-  detectionTag: Player
 --- !u!1 &7829144311992312329
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,7 +433,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6970310616538996189, guid: 1357ed2b6e25e1c4ba3a19dbcf7c0b70, type: 3}
       propertyPath: stoppingDistance
-      value: 3
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6970310616538996189, guid: 1357ed2b6e25e1c4ba3a19dbcf7c0b70, type: 3}
+      propertyPath: startTimeBtwShots
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 6970310616538996189, guid: 1357ed2b6e25e1c4ba3a19dbcf7c0b70, type: 3}
       propertyPath: item.Array.data[0]
