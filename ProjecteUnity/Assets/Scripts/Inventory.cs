@@ -15,6 +15,10 @@ public class Inventory : MonoBehaviour
     [HideInInspector]
     public int pp, pg, gp, gm, gg,pp2,pg2,gp2,gm2,gg2;
     private bool ple;
+
+    private void Awake()
+    {
+    }
     public void Start()
     {
         allSlots = slotHolder.transform.childCount;
@@ -245,9 +249,9 @@ public class Inventory : MonoBehaviour
                     slot[c].GetComponent<Slot>().quantity = gg;
                 }
                 slot[c].GetComponent<Slot>().empty = true;
-                return;
 
-            }            
+                return;
+            }
         }
     }
     public void removeItem(Slot s)
@@ -280,20 +284,5 @@ public class Inventory : MonoBehaviour
             }
 
         }
-    }
-    private void OnDestroy()
-    {
-        SaveData();
-    }
-    private void SaveData()
-    {
-        //PlayerPrefs
-        //posicio
-        //id
-        //quantitat
-    }
-    private void LoadData()
-    {
-        //playerprefs
     }
 }

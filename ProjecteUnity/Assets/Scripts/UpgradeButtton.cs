@@ -10,6 +10,7 @@ public class UpgradeButtton : MonoBehaviour
     private string quantitatMonedes;
     private int qm;
     int cmh = 1,cas=1,cms=1,cdm=1;
+    int cost1;
 
     public Text preu;
     private string quantitatPreu;
@@ -23,8 +24,8 @@ public class UpgradeButtton : MonoBehaviour
     {
         btn.onClick.AddListener(comprobarId);
         preu.text = preuStandart+"";
+        LoadData();
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -34,7 +35,6 @@ public class UpgradeButtton : MonoBehaviour
             quantitatPreu = preu.text;
             qp = int.Parse(quantitatPreu);
         }
-        
     }
     
     void comprobarId() {
@@ -47,13 +47,10 @@ public class UpgradeButtton : MonoBehaviour
                     cmh++;
                     int resta = qm - preuStandart;
                     monedes.text = resta + "";
-                    int cost = preuStandart * cmh;
-                    preuStandart = cost;
-                    preu.text = cost + "";
-                    
-                    //provan de guardar mes vida
-                    PlayerPrefs.SetInt("prefHP", 150);
-                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().health += 50;
+                    cost1 = preuStandart * cmh;
+                    preuStandart = cost1;
+                    preu.text = cost1 + "";
+                    SaveData();
                 }
                 if (cmh == 4) {
                     preu.text ="Max";
@@ -117,5 +114,11 @@ public class UpgradeButtton : MonoBehaviour
                 }
             }
         }
+    }
+    private void SaveData() {
+        PlayerPrefs.SetInt("vida",cmh);
+    }
+    private void LoadData() { 
+        cmh= PlayerPrefs.GetInt("vida", 0); 
     }
 }

@@ -31,11 +31,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
 
     private void Awake(){
-      
         LoadData();
-        
-        
-        
     }
     void Start()
     {
@@ -124,13 +120,13 @@ public class PlayerMovement : MonoBehaviour
     {
         hpText.text=health+"";
     }
-    public void SavePlayer() {
+    /*public void SavePlayer() {
         SaveSystem.SavePlayer(this);
     }
     public void LoadPlayer()
     {
         PlayerData data= SaveSystem.LoadPlayer(); 
-    }
+    }*/
     private void OnDestroy() {
         SaveData();
     }
