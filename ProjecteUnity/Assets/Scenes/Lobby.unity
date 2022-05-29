@@ -231,6 +231,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4233537358938272132, guid: 43fd964eb9c94394082ba3c12dcf323f, type: 3}
   m_PrefabInstance: {fileID: 1444566363}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &554063849 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 301147975919940219, guid: 34889a957fb9ada4c82bd9cc5ae30ffa, type: 3}
+  m_PrefabInstance: {fileID: 1141136581}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 708dba4d84840fe419fddbd0be8aad47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &554962547 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4233537358938272132, guid: 43fd964eb9c94394082ba3c12dcf323f, type: 3}
@@ -384,6 +395,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 301147975683029950, guid: 34889a957fb9ada4c82bd9cc5ae30ffa, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 301147975683029950, guid: 34889a957fb9ada4c82bd9cc5ae30ffa, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 301147975683029950, guid: 34889a957fb9ada4c82bd9cc5ae30ffa, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 554063849}
+    - target: {fileID: 301147975683029950, guid: 34889a957fb9ada4c82bd9cc5ae30ffa, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 301147975683029950, guid: 34889a957fb9ada4c82bd9cc5ae30ffa, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CambiarResolution
+      objectReference: {fileID: 0}
+    - target: {fileID: 301147975683029950, guid: 34889a957fb9ada4c82bd9cc5ae30ffa, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FullScreen, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 301147975683029950, guid: 34889a957fb9ada4c82bd9cc5ae30ffa, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 301147975919940214, guid: 34889a957fb9ada4c82bd9cc5ae30ffa, type: 3}
       propertyPath: m_Name
       value: UI
@@ -2116,7 +2155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4731183596829429606, guid: 501ec1fe3169ac8449f3557902ee8bf7, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4731183596829429610, guid: 501ec1fe3169ac8449f3557902ee8bf7, type: 3}
       propertyPath: m_RootOrder

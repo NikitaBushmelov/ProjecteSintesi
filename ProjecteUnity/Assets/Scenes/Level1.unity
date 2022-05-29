@@ -678,11 +678,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2425270223494889247, guid: a61cd84b663d0854ea840846b4389855, type: 3}
   m_PrefabInstance: {fileID: 290997919}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &293999572 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 854412275172733506, guid: a4dc2a298a3fe6e448cec51d32296e20, type: 3}
-  m_PrefabInstance: {fileID: 1132775481}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &303213750
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1838,6 +1833,14 @@ PrefabInstance:
       propertyPath: enemy1
       value: 
       objectReference: {fileID: 798539232}
+    - target: {fileID: 1599922221749114455, guid: 951a0065968f8df4b85d89869e0c210b, type: 3}
+      propertyPath: enemy2
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599922221749114455, guid: 951a0065968f8df4b85d89869e0c210b, type: 3}
+      propertyPath: enemy3
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5761209185857854483, guid: 951a0065968f8df4b85d89869e0c210b, type: 3}
       propertyPath: m_Name
       value: 5 enemics (2)
@@ -2702,7 +2705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19f6e3bf79f59444fa67d055343ec38d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 293999572}
+  target: {fileID: 1250973248}
   offset: {x: 0, y: 0, z: -10}
   smoothFactor: 1
 --- !u!82 &1042741512
@@ -3138,7 +3141,7 @@ PrefabInstance:
       objectReference: {fileID: 303213752}
     - target: {fileID: 8405468785630269848, guid: a4dc2a298a3fe6e448cec51d32296e20, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8405468785630269848, guid: a4dc2a298a3fe6e448cec51d32296e20, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3199,7 +3202,7 @@ PrefabInstance:
     - target: {fileID: 8405468785630269853, guid: a4dc2a298a3fe6e448cec51d32296e20, type: 3}
       propertyPath: AttackText
       value: 
-      objectReference: {fileID: 597141746}
+      objectReference: {fileID: 1490916882}
     - target: {fileID: 8405468785630269853, guid: a4dc2a298a3fe6e448cec51d32296e20, type: 3}
       propertyPath: attackspeed
       value: 0.4
@@ -3461,6 +3464,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 358233518800594396, guid: 951a0065968f8df4b85d89869e0c210b, type: 3}
   m_PrefabInstance: {fileID: 3838039375119767576}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1250973248 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8405468785630269848, guid: a4dc2a298a3fe6e448cec51d32296e20, type: 3}
+  m_PrefabInstance: {fileID: 1132775481}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1262443828
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3555,6 +3563,8 @@ MonoBehaviour:
   monedes: {fileID: 1172498242}
   preu: 50
   item: {fileID: 1375111997817932029, guid: 3f4c480e4c4813e4f8ac63249dc968d8, type: 3}
+  posX: -2.71
+  posY: 0.37
   btn: {fileID: 1301772793}
 --- !u!224 &1308659072 stripped
 RectTransform:
@@ -4904,6 +4914,8 @@ MonoBehaviour:
   monedes: {fileID: 1172498242}
   preu: 25
   item: {fileID: 5049532275761175591, guid: 6cc9f653e4224064892008063eb38e7b, type: 3}
+  posX: -3.57
+  posY: 0.37
   btn: {fileID: 1967438352}
 --- !u!1001 &2025536922
 PrefabInstance:
