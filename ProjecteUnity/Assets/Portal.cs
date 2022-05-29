@@ -9,7 +9,12 @@ public class Portal : MonoBehaviour
  
   public void OnTriggerEnter2D(Collider2D other)
   {
-      SceneManager.LoadScene(escena);
+    
+    if (other.CompareTag("Player"))
+        {
+            SceneManager.LoadScene(escena);
+        }
+    
 
   }
 
