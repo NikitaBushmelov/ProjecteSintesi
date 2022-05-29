@@ -3197,7 +3197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 228910980}
   offset: {x: 0, y: 0, z: -10}
-  smoothFactor: 1
+  smoothFactor: 3
 --- !u!1 &1680917612 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8405468785630269855, guid: a4dc2a298a3fe6e448cec51d32296e20, type: 3}
@@ -5435,6 +5435,10 @@ PrefabInstance:
     - target: {fileID: 6476844086204869707, guid: 38f5c6119d6dbd7468a40b5102e8c1ed, type: 3}
       propertyPath: m_Name
       value: Boss lvl2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8742311313631064524, guid: 38f5c6119d6dbd7468a40b5102e8c1ed, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38f5c6119d6dbd7468a40b5102e8c1ed, type: 3}
