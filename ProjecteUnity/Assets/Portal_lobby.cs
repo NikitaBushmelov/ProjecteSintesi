@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-public class Portal : MonoBehaviour
+public class Portal_lobby : MonoBehaviour
 {
-    public string escena;
+   public string Lobby;
  
   public void OnTriggerEnter2D(Collider2D other)
   {
-      SceneManager.LoadScene(escena);
+      SceneManager.LoadScene(Lobby);
 
   }
-
 }
