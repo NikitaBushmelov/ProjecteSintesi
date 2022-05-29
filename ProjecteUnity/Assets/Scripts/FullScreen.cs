@@ -56,12 +56,12 @@ public class FullScreen : MonoBehaviour
         resolucionesDropDown.value = resolucionActual;
         resolucionesDropDown.RefreshShownValue();
 
-        // resolucionesDropDown.value = PlayerPrefs.GetInt("numeroResolucion",0);
+        resolucionesDropDown.value = PlayerPrefs.GetInt("numeroResolucion",0);
 
     }
     public void CambiarResolution (int indiceResolucion)
     {
-       // PlayerPrefs.SetInt("numeroResolucion", resolucionesDropDown.value);
+       PlayerPrefs.SetInt("numeroResolucion", resolucionesDropDown.value);
 
 
         Resolution resolucion = resoluciones[indiceResolucion];
