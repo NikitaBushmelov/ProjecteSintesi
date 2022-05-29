@@ -140,23 +140,17 @@ public class PlayerMovement : MonoBehaviour
     }
     private void LoadData()
     {
-        health = PlayerPrefs.GetInt(prefHP, 0);
+        health = PlayerPrefs.GetInt(prefHP, 50);
         Monedes.text = PlayerPrefs.GetString("monedes");
         maxhealth= PlayerPrefs.GetInt("MaxHP", maxhealth); 
         speed= PlayerPrefs.GetFloat("MoveSpeed", 4);
         attackspeed = PlayerPrefs.GetFloat("BulletSpeed",0.4f);
-        dmg = PlayerPrefs.GetInt("Dmg",0);
+        dmg = PlayerPrefs.GetInt("Dmg",20);
     }
     void die()
     {
-        health=maxhealth;
-        //health = 100;
-        /*PlayerPrefs.SetInt(prefHP, 50);
-        PlayerPrefs.SetInt("Dmg", dmg);
-        PlayerPrefs.SetFloat("MoveSpeed", speed);
-        PlayerPrefs.SetFloat("BulletSpeed", attackspeed);
-        */
-        
+        health = maxhealth;
+        dmg = 20;
         SceneManager.LoadScene("Lose");
     }
 }
