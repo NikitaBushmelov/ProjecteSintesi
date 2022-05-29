@@ -418,6 +418,8 @@ MonoBehaviour:
   dmg: 20
   attackspeed: 0
   AttackText: {fileID: 0}
+  Monedes: {fileID: 0}
+  OptionsOn: 0
   Options: {fileID: 0}
   rotationSpeed: 500
 --- !u!114 &8405468785630269854
@@ -450,7 +452,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 627fc2c2ab3efe04f96d0ca1e90ca438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  invetoryEnabled: 0
   inventory: {fileID: 0}
+  allSlots: 0
+  slot: []
   size: 0
   slotHolder: {fileID: 0}
   pp: 0
@@ -458,6 +463,11 @@ MonoBehaviour:
   gp: 0
   gm: 0
   gg: 0
+  pp2: 0
+  pg2: 0
+  gp2: 0
+  gm2: 0
+  gg2: 0
 --- !u!1 &8405468787159813528
 GameObject:
   m_ObjectHideFlags: 0

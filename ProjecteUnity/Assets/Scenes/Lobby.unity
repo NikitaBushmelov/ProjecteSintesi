@@ -285,6 +285,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: f-button (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4233537358938272128, guid: 43fd964eb9c94394082ba3c12dcf323f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4233537358938272132, guid: 43fd964eb9c94394082ba3c12dcf323f, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -908,6 +912,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: f-button
       objectReference: {fileID: 0}
+    - target: {fileID: 4233537358938272128, guid: 43fd964eb9c94394082ba3c12dcf323f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4233537358938272132, guid: 43fd964eb9c94394082ba3c12dcf323f, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1147,6 +1155,8 @@ MonoBehaviour:
   monedes: {fileID: 321007770}
   preu: 25
   item: {fileID: 5049532275761175591, guid: 6cc9f653e4224064892008063eb38e7b, type: 3}
+  posX: 0
+  posY: 0
   btn: {fileID: 1447204438}
 --- !u!114 &1457816962 stripped
 MonoBehaviour:
@@ -1262,6 +1272,8 @@ MonoBehaviour:
   monedes: {fileID: 321007770}
   preu: 50
   item: {fileID: 1375111997817932029, guid: 3f4c480e4c4813e4f8ac63249dc968d8, type: 3}
+  posX: 1.3
+  posY: 0.5
   btn: {fileID: 1536932564}
 --- !u!114 &1582667988 stripped
 MonoBehaviour:
@@ -1404,6 +1416,10 @@ PrefabInstance:
     - target: {fileID: 22255945403436611, guid: 1d3d7435e475ec24eb7eb15c4e476014, type: 3}
       propertyPath: m_Name
       value: Maquina Vender
+      objectReference: {fileID: 0}
+    - target: {fileID: 22255945403436611, guid: 1d3d7435e475ec24eb7eb15c4e476014, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1962959380986896174, guid: 1d3d7435e475ec24eb7eb15c4e476014, type: 3}
       propertyPath: m_RootOrder
@@ -2097,6 +2113,10 @@ PrefabInstance:
     - target: {fileID: 4731183596829429606, guid: 501ec1fe3169ac8449f3557902ee8bf7, type: 3}
       propertyPath: m_Name
       value: Maquina Pots Maquina
+      objectReference: {fileID: 0}
+    - target: {fileID: 4731183596829429606, guid: 501ec1fe3169ac8449f3557902ee8bf7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4731183596829429610, guid: 501ec1fe3169ac8449f3557902ee8bf7, type: 3}
       propertyPath: m_RootOrder

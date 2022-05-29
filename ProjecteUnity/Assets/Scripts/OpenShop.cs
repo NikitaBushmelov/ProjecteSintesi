@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class OpenShop : MonoBehaviour
 {
-   
 
+    
     public bool puedeAbrir;
     public bool abrir;
     public GameObject canvas;
