@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     public GameObject gemamig;
     public GameObject pocio;
     public GameObject gemapet;
-      public GameObject Teleport;
+      
    
 
     public GameObject deathEffect;
