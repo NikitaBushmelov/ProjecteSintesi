@@ -143,9 +143,9 @@ public class PlayerMovement : MonoBehaviour
     {
         health = PlayerPrefs.GetInt(prefHP, 0);
         Monedes.text = PlayerPrefs.GetString("monedes");
-        maxhealth= PlayerPrefs.GetInt("MaxHP", 0); 
-        speed= PlayerPrefs.GetFloat("MoveSpeed", 0);
-        attackspeed = PlayerPrefs.GetFloat("BulletSpeed",0);
+        maxhealth= PlayerPrefs.GetInt("MaxHP", maxhealth); 
+        speed= PlayerPrefs.GetFloat("MoveSpeed", 4);
+        attackspeed = PlayerPrefs.GetFloat("BulletSpeed",0.4f);
         dmg = PlayerPrefs.GetInt("Dmg",0);
     }
     void die()
