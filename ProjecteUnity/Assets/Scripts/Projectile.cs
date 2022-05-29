@@ -43,6 +43,11 @@ public class Projectile : MonoBehaviour
 
             DestroyBullet();
         }
+         if (other.CompareTag("Porta"))
+        {
+
+            DestroyBullet();
+        }
     }
     void targetPlayer()
     {
