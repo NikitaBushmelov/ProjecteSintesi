@@ -1,110 +1,156 @@
 Using pre-set license
 Built from '2021.1/staging' branch; Version is '2021.1.3f1 (4bef613afd59) revision 4976481'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 19043.1706; Version 2009; 64bit' Language: 'es' Physical Memory: 16228 MB
+OS: 'Windows 10 Home; OS build 19043.1706; Version 2009; 64bit' Language: 'es' Physical Memory: 8047 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-B:\sistema operatiu\Artur\unity versions\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\2021.1.3f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-B:/sistema operatiu/Escritorio/repositoridam/ProjecteSintesi/ProjecteUnity
+C:/Users/bushm/OneDrive/Documents/GitHub/Projecte/ProjecteSintesi/ProjecteUnity
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-54681
-Successfully changed project path to: B:/sistema operatiu/Escritorio/repositoridam/ProjecteSintesi/ProjecteUnity
-B:/sistema operatiu/Escritorio/repositoridam/ProjecteSintesi/ProjecteUnity
+54507
+Successfully changed project path to: C:/Users/bushm/OneDrive/Documents/GitHub/Projecte/ProjecteSintesi/ProjecteUnity
+C:/Users/bushm/OneDrive/Documents/GitHub/Projecte/ProjecteSintesi/ProjecteUnity
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 174.81 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 104.98 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.3f1 (4bef613afd59)
-[Subsystems] Discovering subsystems at path B:/sistema operatiu/Artur/unity versions/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path B:/sistema operatiu/Escritorio/repositoridam/ProjecteSintesi/ProjecteUnity/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.1.3f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/bushm/OneDrive/Documents/GitHub/Projecte/ProjecteSintesi/ProjecteUnity/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1060 (ID=0x1c20)
+    Renderer: NVIDIA GeForce GTX 1050 Ti (ID=0x1c8c)
     Vendor:   NVIDIA
-    VRAM:     6052 MB
+    VRAM:     4018 MB
     Driver:   30.0.15.1295
 Initialize mono
-Mono path[0] = 'B:/sistema operatiu/Artur/unity versions/Editor/Data/Managed'
-Mono path[1] = 'B:/sistema operatiu/Artur/unity versions/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'B:/sistema operatiu/Artur/unity versions/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56720
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.1.3f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.1.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.1.3f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56332
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: B:/sistema operatiu/Artur/unity versions/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001921 seconds.
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.3f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003934 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 127.90 ms, found 2 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 105.76 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.573 seconds
+- Completed reload, in  3.634 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005070 seconds.
+Registered in 0.003570 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 103.19 ms, found 2 plugins.
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 111.64 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.375 seconds
+- Completed reload, in  1.335 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 1.29 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3403 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 129.8 MB.
-System memory in use after: 130.0 MB.
+System memory in use before: 130.0 MB.
+System memory in use after: 130.1 MB.
 
-Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 3862.
-Total: 2.662900 ms (FindLiveObjects: 0.279500 ms CreateObjectMapping: 0.136000 ms MarkObjects: 2.189000 ms  DeleteObjects: 0.057400 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Scenes/Level2.unity
-  artifactKey: Guid(f5c85a571f22d384b95dd561f7817874) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Level2.unity using Guid(f5c85a571f22d384b95dd561f7817874) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '813486b91d34a1c97827af1d44fae257') in 0.012255 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 10.372196 seconds.
-  path: Assets/Scenes/Level1.unity
-  artifactKey: Guid(226d143d2c682a14c93658bdeaca319e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Level1.unity using Guid(226d143d2c682a14c93658bdeaca319e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7731bf450962655db6a87c6b324f0e08') in 0.002552 seconds 
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 7.45 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 61.0 MB.
-System memory in use after: 61.3 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 3862.
-Total: 3.308400 ms (FindLiveObjects: 0.372100 ms CreateObjectMapping: 0.198500 ms MarkObjects: 2.719000 ms  DeleteObjects: 0.017900 ms)
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 3858.
+Total: 2.684200 ms (FindLiveObjects: 0.313500 ms CreateObjectMapping: 0.205500 ms MarkObjects: 2.074200 ms  DeleteObjects: 0.090300 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 43.645677 seconds.
-  path: Assets/Scenes/Level3.unity
-  artifactKey: Guid(37838216ed23b2341b547c2a58b9dd66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Level3.unity using Guid(37838216ed23b2341b547c2a58b9dd66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcad13d9d5122f7c9829d1bd197f47a5') in 0.004030 seconds 
+  path: Assets/Prefabs/Canvas/UI.prefab
+  artifactKey: Guid(34889a957fb9ada4c82bd9cc5ae30ffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Canvas/UI.prefab using Guid(34889a957fb9ada4c82bd9cc5ae30ffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a76cb93923558af260a56af7690deac') in 0.095962 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 5.781465 seconds.
-  path: Assets/Scenes/Level4.unity
-  artifactKey: Guid(54501f57590dc6b44bbc4672bd2bf9c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Level4.unity using Guid(54501f57590dc6b44bbc4672bd2bf9c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25d932a9fd2a8c4ae9eb038a8b2247d3') in 0.002259 seconds 
+  Time since last request: 0.000347 seconds.
+  path: Assets/Prefabs/Canvas/Vida.prefab
+  artifactKey: Guid(a6f27be0c1b54e84fa76edb65ee6be7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Canvas/Vida.prefab using Guid(a6f27be0c1b54e84fa76edb65ee6be7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0165761d072cad34b0ca18c18d7be3b') in 0.012762 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 8.106607 seconds.
-  path: Assets/Scenes/Level5.unity
-  artifactKey: Guid(3907f6932f43039488918e583fdb69d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Level5.unity using Guid(3907f6932f43039488918e583fdb69d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90a971ca2ab764ed8b9c1f930593d726') in 0.005861 seconds 
+  Time since last request: 16.285799 seconds.
+  path: Assets/Prefabs/Canvas/Moneda.prefab
+  artifactKey: Guid(a54442268c0a40c4ebc532fb71d22f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Canvas/Moneda.prefab using Guid(a54442268c0a40c4ebc532fb71d22f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2311bd03a7578802752736537483e466') in 0.014194 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000324 seconds.
+  path: Assets/Prefabs/Canvas/UI.prefab
+  artifactKey: Guid(34889a957fb9ada4c82bd9cc5ae30ffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Canvas/UI.prefab using Guid(34889a957fb9ada4c82bd9cc5ae30ffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83d7350933631c5cf541d20c1b58eee1') in 0.030561 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.843587 seconds.
+  path: Assets/Prefabs/Canvas/Moneda.prefab
+  artifactKey: Guid(a54442268c0a40c4ebc532fb71d22f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Canvas/Moneda.prefab using Guid(a54442268c0a40c4ebc532fb71d22f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff99cb48e5f4d9b929b8afee60e08062') in 0.012411 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000294 seconds.
+  path: Assets/Prefabs/Canvas/UI.prefab
+  artifactKey: Guid(34889a957fb9ada4c82bd9cc5ae30ffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Canvas/UI.prefab using Guid(34889a957fb9ada4c82bd9cc5ae30ffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10b924691f8f916efc11bbd89b48b795') in 0.019312 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.726636 seconds.
+  path: Assets/Prefabs/Canvas/Moneda.prefab
+  artifactKey: Guid(a54442268c0a40c4ebc532fb71d22f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Canvas/Moneda.prefab using Guid(a54442268c0a40c4ebc532fb71d22f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '999a403c709a36c98541cabd2463ab39') in 0.005950 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000335 seconds.
+  path: Assets/Prefabs/Canvas/UI.prefab
+  artifactKey: Guid(34889a957fb9ada4c82bd9cc5ae30ffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Canvas/UI.prefab using Guid(34889a957fb9ada4c82bd9cc5ae30ffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09b59ff77f26af84db270a50e43f1968') in 0.021461 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.027907 seconds.
+  path: Assets/Prefabs/Canvas/Moneda.prefab
+  artifactKey: Guid(a54442268c0a40c4ebc532fb71d22f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Canvas/Moneda.prefab using Guid(a54442268c0a40c4ebc532fb71d22f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c61dd3686b4a1af6ac64eaa1adec71e2') in 0.004799 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000318 seconds.
+  path: Assets/Prefabs/Canvas/UI.prefab
+  artifactKey: Guid(34889a957fb9ada4c82bd9cc5ae30ffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Canvas/UI.prefab using Guid(34889a957fb9ada4c82bd9cc5ae30ffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc1a9617106896af1297c3bc3a01bf00') in 0.025353 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.195943 seconds.
+  path: Assets/Prefabs/Canvas/Moneda.prefab
+  artifactKey: Guid(a54442268c0a40c4ebc532fb71d22f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Canvas/Moneda.prefab using Guid(a54442268c0a40c4ebc532fb71d22f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da8ccde4eaf767cab50587b4ea44ee62') in 0.004963 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000369 seconds.
+  path: Assets/Prefabs/Canvas/UI.prefab
+  artifactKey: Guid(34889a957fb9ada4c82bd9cc5ae30ffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Canvas/UI.prefab using Guid(34889a957fb9ada4c82bd9cc5ae30ffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b979cdb5ee8b2700ec37811a7925c4d5') in 0.016244 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.798234 seconds.
+  path: Assets/Prefabs/Canvas/Moneda.prefab
+  artifactKey: Guid(a54442268c0a40c4ebc532fb71d22f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Canvas/Moneda.prefab using Guid(a54442268c0a40c4ebc532fb71d22f88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '610f5409d902dd75cdb4160914dc56bc') in 0.005093 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000339 seconds.
+  path: Assets/Prefabs/Canvas/UI.prefab
+  artifactKey: Guid(34889a957fb9ada4c82bd9cc5ae30ffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Canvas/UI.prefab using Guid(34889a957fb9ada4c82bd9cc5ae30ffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07d84d23ce7b2e71bc806f3daba6dc39') in 0.015124 seconds 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

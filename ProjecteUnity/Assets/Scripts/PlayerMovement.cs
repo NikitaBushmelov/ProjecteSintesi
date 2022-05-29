@@ -86,12 +86,12 @@ public class PlayerMovement : MonoBehaviour
         dmgText();
         if (health<=0) {
             die();
-            c++;
+           // c++;
         }
-        if(c==1){
+        /*if(c==1){
             health=maxhealth;
             c=0;
-        }
+        }*/
     }
     public void dmgText()
     {
@@ -99,8 +99,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public void movementText() 
     {
-        float v = speed;
-        MovementSpeed.text = "" + v;
+        MovementSpeed.text = "" + speed;
     }
     public void TakeDamage() { 
             health -= GameObject.FindGameObjectWithTag("enemy").GetComponent<Enemy>().dmg;
@@ -152,7 +151,12 @@ public class PlayerMovement : MonoBehaviour
     {
         health=maxhealth;
         //health = 100;
-        //PlayerPrefs.SetInt(prefHP, health);
+        /*PlayerPrefs.SetInt(prefHP, 50);
+        PlayerPrefs.SetInt("Dmg", dmg);
+        PlayerPrefs.SetFloat("MoveSpeed", speed);
+        PlayerPrefs.SetFloat("BulletSpeed", attackspeed);
+        */
+        
         SceneManager.LoadScene("Lose");
     }
 }
