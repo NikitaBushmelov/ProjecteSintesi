@@ -29,7 +29,7 @@ public class BuyPotion : MonoBehaviour
             {
                 qm = qm - preu;
                 monedes.text = qm + "";
-                Instantiate(item,new Vector3(this.transform.position.x+(-0.2f), this.transform.position.y+(-0.25f),0),Quaternion.identity);
+                Instantiate(item,new Vector3((-0.2f),(-0.25f),0),Quaternion.identity);
             }
         }
         if (ID == 2)
@@ -38,7 +38,7 @@ public class BuyPotion : MonoBehaviour
             {
                 qm = qm - preu;
                 monedes.text = qm + "";
-                Instantiate(item, new Vector3(this.transform.position.x + 0, this.transform.position.y +( -0.25f), 0), Quaternion.identity);
+                Instantiate(item, new Vector3( 0,( -0.25f), 0), Quaternion.identity);
             }
         }
 

@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     public GameObject gemamig;
     public GameObject pocio;
     public GameObject gemapet;
+      public GameObject Teleport;
    
 
     public GameObject deathEffect;
@@ -78,6 +79,9 @@ public class Enemy : MonoBehaviour
                Instantiate(pocio, transform.position, Quaternion.identity);
         }if((rand>=36)&&(rand<=50)){
                Instantiate(gemapet, transform.position, Quaternion.identity);
+
+        } if((rand>=1)&&(rand<=100)){
+               Instantiate(Teleport, transform.position, Quaternion.identity);
         }
         Debug.Log("el randm " + rand);
 

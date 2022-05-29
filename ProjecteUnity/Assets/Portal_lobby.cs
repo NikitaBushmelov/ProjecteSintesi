@@ -8,7 +8,11 @@ public class Portal_lobby : MonoBehaviour
  
   public void OnTriggerEnter2D(Collider2D other)
   {
-      SceneManager.LoadScene(Lobby);
+    if (other.CompareTag("Player"))
+        {
+             SceneManager.LoadScene(Lobby);
+        }
+    
 
   }
 }
