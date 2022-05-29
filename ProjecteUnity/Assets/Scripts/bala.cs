@@ -34,12 +34,7 @@ public class bala : MonoBehaviour
                 Destroy(gameObject);
                
           }
-          if (col.gameObject.CompareTag("Laser"))
-          {
-             Instantiate(impactEffect, transform.position, transform.rotation);
-               Destroy(gameObject);
-               
-          }
+          
           if (col.gameObject.CompareTag("bala"))
           {
               Instantiate(impactEffect, transform.position, transform.rotation);

@@ -31,16 +31,17 @@ public class UpgradeButtton : MonoBehaviour
     void Update()
     {
         
-        if (cmh==4) {
+        if (cmh == 4) {
             preu.text = "Max";
-            if (!preu.text.Equals("Max"))
+            
+        }
+        if (!preu.text.Equals("Max"))
             {
                 quantitatMonedes = monedes.text;
                 qm = int.Parse(quantitatMonedes);
                 quantitatPreu = preu.text;
                 qp = int.Parse(quantitatPreu);
             }
-        }
         if (cas == 4)
         {
             preu.text = "Max";

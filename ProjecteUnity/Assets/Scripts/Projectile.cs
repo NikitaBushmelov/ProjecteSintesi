@@ -38,11 +38,7 @@ public class Projectile : MonoBehaviour
             
             DestroyBullet();
         }
-        if (other.CompareTag("Bala"))
-        {
-
-            DestroyBullet();
-        }
+        
          if (other.CompareTag("Porta"))
         {
 
