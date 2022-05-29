@@ -18,9 +18,12 @@ public class MainPanel : MonoBehaviour
     [Header("Panels")]
     public GameObject mainPanel;
     public GameObject optionsPanel;
-  
+    public GameObject instructionsPanel;
+    public GameObject instructionsPanel2;
+    public GameObject instructionsPanel3;
+    public GameObject instructionsPanel4;
 
- 
+
     private void Awake()
     {
         volumeFX.onValueChanged.AddListener(ChangeVolumeFX);
@@ -49,18 +52,40 @@ public class MainPanel : MonoBehaviour
 
     public void OpenPanel( GameObject panel)
     {
-     
-          
         mainPanel.SetActive(false);
         optionsPanel.SetActive(false);
-    
         panel.SetActive(true);
         PlaySoundButton();
-    
-
     }
-
-    
+    public void OpenInstruction1(GameObject instructionsPanel) {
+        mainPanel.SetActive(false);
+        instructionsPanel.SetActive(true);
+        PlaySoundButton();
+    }
+    public void OpenInstruction2(GameObject instructionsPanel2)
+    {
+        instructionsPanel.SetActive(false);
+        instructionsPanel2.SetActive(true);
+        PlaySoundButton();
+    }
+    public void OpenInstruction3(GameObject instructionsPanel3)
+    {
+        instructionsPanel2.SetActive(false);
+        instructionsPanel3.SetActive(true);
+        PlaySoundButton();
+    }
+    public void OpenInstruction4(GameObject instructionsPanel4)
+    {
+        instructionsPanel3.SetActive(false);
+        instructionsPanel4.SetActive(true);
+        PlaySoundButton();
+    }
+    public void OpenInstruction5(GameObject mainPanel)
+    {
+        instructionsPanel4.SetActive(false);
+        mainPanel.SetActive(true);
+        PlaySoundButton();
+    }
 
     public void ChangeVolumeMaster(float v)
     {
