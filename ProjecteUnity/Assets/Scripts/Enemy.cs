@@ -9,11 +9,11 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private float rotationSpeed;
     public int Health = 100;
-    public GameObject item;
-    public GameObject item1;
-    public GameObject item2;
-    public GameObject item3;
-    public GameObject item4;
+    public GameObject gemagran;
+    public GameObject pociogran;
+    public GameObject gemamig;
+    public GameObject pocio;
+    public GameObject gemapet;
    
 
     public GameObject deathEffect;
@@ -66,18 +66,18 @@ public class Enemy : MonoBehaviour
     }
     void drop()
     {
-        int rand = Random.Range(0, 25);
-        if (rand == 24)
-        {
-            Instantiate(item, transform.position, Quaternion.identity); 
-        }if (rand ==2){
-               Instantiate(item1, transform.position, Quaternion.identity);
-        }if (rand ==12){
-               Instantiate(item2, transform.position, Quaternion.identity);
-        }if (rand ==18){
-               Instantiate(item3, transform.position, Quaternion.identity);
-        }if (rand ==6){
-               Instantiate(item4, transform.position, Quaternion.identity);
+        int rand = Random.Range(1, 100);
+      
+        if((rand>=6)&&(rand<=10)){
+            Instantiate(gemagran, transform.position, Quaternion.identity); 
+        }if((rand>=1)&&(rand<=5)){
+               Instantiate(pociogran, transform.position, Quaternion.identity);
+        }if((rand>=11)&&(rand<=20)){
+               Instantiate(gemamig, transform.position, Quaternion.identity);
+        }if((rand>=21)&&(rand<=35)){
+               Instantiate(pocio, transform.position, Quaternion.identity);
+        }if((rand>=36)&&(rand<=50)){
+               Instantiate(gemapet, transform.position, Quaternion.identity);
         }
         Debug.Log("el randm " + rand);
 
