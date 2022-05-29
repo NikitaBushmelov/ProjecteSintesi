@@ -37,6 +37,8 @@ public class SellButton : MonoBehaviour
                 GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>().gp2 = 0;
                 slot[i].GetComponent<Slot>().slotText.text = 0+"";
                 slot[i].GetComponent<Slot>().item = null;
+                slot[i].GetComponent<Slot>().quantity = 0;
+                slot[i].GetComponent<Slot>().ple = false;
                 slot[i].GetComponent<Slot>().ID = 0;
                 slot[i].GetComponent<Slot>().type = null;
                 slot[i].GetComponent<Slot>().desc = null;
@@ -52,6 +54,8 @@ public class SellButton : MonoBehaviour
                 GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>().gp2 = 0;
                 slot[i].GetComponent<Slot>().slotText.text = 0 + "";
                 slot[i].GetComponent<Slot>().item = null;
+                slot[i].GetComponent<Slot>().quantity = 0;
+                slot[i].GetComponent<Slot>().ple = false;
                 slot[i].GetComponent<Slot>().ID = 0;
                 slot[i].GetComponent<Slot>().type = null;
                 slot[i].GetComponent<Slot>().desc = null;
@@ -67,6 +71,8 @@ public class SellButton : MonoBehaviour
                 GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>().gp2 = 0;
                 slot[i].GetComponent<Slot>().slotText.text = 0 + "";
                 slot[i].GetComponent<Slot>().item = null;
+                slot[i].GetComponent<Slot>().quantity = 0;
+                slot[i].GetComponent<Slot>().ple = false;
                 slot[i].GetComponent<Slot>().ID = 0;
                 slot[i].GetComponent<Slot>().type = null;
                 slot[i].GetComponent<Slot>().desc = null;

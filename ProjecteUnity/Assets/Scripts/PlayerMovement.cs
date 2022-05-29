@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     public float speed;
     public int health;
-    public int maxhealth=100;
+    public int maxhealth=50;
     public Text hpText;
     public Text MovementSpeed;
     public int dmg;
@@ -134,12 +134,19 @@ public class PlayerMovement : MonoBehaviour
     {
         PlayerPrefs.SetInt(prefHP,health);
         PlayerPrefs.SetString("monedes",Monedes.text);
+        PlayerPrefs.SetInt("MaxHP",maxhealth);
+        PlayerPrefs.SetFloat("MoveSpeed", speed);
+        PlayerPrefs.SetFloat("BulletSpeed", attackspeed);
+        PlayerPrefs.SetInt("Dmg", dmg);
     }
     private void LoadData()
     {
         health = PlayerPrefs.GetInt(prefHP, 0);
-        //PlayerPrefs.SetInt(prefHP, health);
         Monedes.text = PlayerPrefs.GetString("monedes");
+        maxhealth= PlayerPrefs.GetInt("MaxHP", 0); 
+        speed= PlayerPrefs.GetFloat("MoveSpeed", 0);
+        attackspeed = PlayerPrefs.GetFloat("BulletSpeed",0);
+        dmg = PlayerPrefs.GetInt("Dmg",0);
     }
     void die()
     {

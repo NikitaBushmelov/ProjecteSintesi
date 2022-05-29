@@ -10,7 +10,6 @@ public class UpgradeButtton : MonoBehaviour
     private string quantitatMonedes;
     private int qm;
     int cmh = 1,cas=1,cms=1,cdm=1;
-    int cost1;
 
     public Text preu;
     private string quantitatPreu;
@@ -22,18 +21,59 @@ public class UpgradeButtton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         btn.onClick.AddListener(comprobarId);
         preu.text = preuStandart+"";
         LoadData();
+        //Debug.Log("vida " + cmh + " aspeed " + cas + " movespeed " + cms + " dmg " + cdm);
     }
     // Update is called once per frame
     void Update()
     {
-        if (!preu.text.Equals("Max")) {
-            quantitatMonedes = monedes.text;
-            qm = int.Parse(quantitatMonedes);
-            quantitatPreu = preu.text;
-            qp = int.Parse(quantitatPreu);
+        
+        if (cmh==4) {
+            preu.text = "Max";
+            if (!preu.text.Equals("Max"))
+            {
+                quantitatMonedes = monedes.text;
+                qm = int.Parse(quantitatMonedes);
+                quantitatPreu = preu.text;
+                qp = int.Parse(quantitatPreu);
+            }
+        }
+        if (cas == 4)
+        {
+            preu.text = "Max";
+            if (!preu.text.Equals("Max"))
+            {
+                quantitatMonedes = monedes.text;
+                qm = int.Parse(quantitatMonedes);
+                quantitatPreu = preu.text;
+                qp = int.Parse(quantitatPreu);
+            }
+
+        }
+        if (cms == 4)
+        {
+            preu.text = "Max";
+            if (!preu.text.Equals("Max"))
+            {
+                quantitatMonedes = monedes.text;
+                qm = int.Parse(quantitatMonedes);
+                quantitatPreu = preu.text;
+                qp = int.Parse(quantitatPreu);
+            }
+        }
+        if (cdm == 4)
+        {
+            preu.text = "Max";
+            if (!preu.text.Equals("Max"))
+            {
+                quantitatMonedes = monedes.text;
+                qm = int.Parse(quantitatMonedes);
+                quantitatPreu = preu.text;
+                qp = int.Parse(quantitatPreu);
+            }
         }
     }
     
@@ -47,36 +87,14 @@ public class UpgradeButtton : MonoBehaviour
                     cmh++;
                     int resta = qm - preuStandart;
                     monedes.text = resta + "";
-                    cost1 = preuStandart * cmh;
-                    preuStandart = cost1;
-                    preu.text = cost1 + "";
+                    int cost = preuStandart * cmh;
+                    preu.text = "" +cost;
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().maxhealth += 50;
                     SaveData();
-                }
-                if (cmh == 4) {
-                    preu.text ="Max";
                 }
             }
         }
         if (ID == 2)
-        {
-            if (qm >= preuStandart)
-            {
-                if (cas < 4)
-                {
-                    cas++;
-                    int resta = qm - preuStandart;
-                    monedes.text = resta + "";
-                    int cost = preuStandart * cas;
-                    preuStandart = cost;
-                    preu.text = cost + "";
-                }
-                if (cas == 4)
-                {
-                    preu.text = "Max";
-                }
-            }
-        }
-        if (ID == 3)
         {
             if (qm >= preuStandart)
             {
@@ -86,16 +104,13 @@ public class UpgradeButtton : MonoBehaviour
                     int resta = qm - preuStandart;
                     monedes.text = resta + "";
                     int cost = preuStandart * cms;
-                    preuStandart = cost;
-                    preu.text = cost + "";
-                }
-                if (cms == 4)
-                {
-                    preu.text = "Max";
+                    preu.text = "" + cost;
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().speed += 0.25f;
+                    SaveData();
                 }
             }
         }
-        if (ID == 4)
+        if (ID == 3)
         {
             if (qm >= preuStandart)
             {
@@ -105,20 +120,45 @@ public class UpgradeButtton : MonoBehaviour
                     int resta = qm - preuStandart;
                     monedes.text = resta + "";
                     int cost = preuStandart * cdm;
-                    preuStandart = cost;
-                    preu.text = cost + "";
+                    preu.text = "" + cost;
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().dmg += 20;
+                    SaveData();
                 }
-                if (cdm == 4)
+            }
+        }
+        if (ID == 4)
+        {
+            if (qm >= preuStandart)
+            {
+                if (cas < 4)
                 {
-                    preu.text = "Max";
+                    cas++;
+                    int resta = qm - preuStandart;
+                    monedes.text = resta + "";
+                    int cost = preuStandart * cas;
+                    preu.text = "" + cost;
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().attackspeed += 0.1f;
+                    SaveData();
                 }
             }
         }
     }
     private void SaveData() {
         PlayerPrefs.SetInt("vida",cmh);
+        PlayerPrefs.SetInt("mspeed", cms);
+        PlayerPrefs.SetInt("dmg", cdm);
+        PlayerPrefs.SetInt("aspeed", cas);
     }
-    private void LoadData() { 
-        cmh= PlayerPrefs.GetInt("vida", 0); 
+    private void LoadData() {
+        
+        cmh = PlayerPrefs.GetInt("vida", 1);
+        preu.text = (preuStandart * cmh) + "";
+        cms = PlayerPrefs.GetInt("mspeed", 1);
+        preu.text = (preuStandart * cms) + "";
+        cdm = PlayerPrefs.GetInt("dmg", 1);
+        preu.text = (preuStandart * cdm) + "";
+        cas = PlayerPrefs.GetInt("aspeed", 1);
+        preu.text = (preuStandart * cas) + "";
+        
     }
 }
