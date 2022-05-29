@@ -80,9 +80,7 @@ public class Enemy : MonoBehaviour
         }if((rand>=36)&&(rand<=50)){
                Instantiate(gemapet, transform.position, Quaternion.identity);
 
-        } if((rand>=1)&&(rand<=100)){
-               Instantiate(Teleport, transform.position, Quaternion.identity);
-        }
+        } 
         Debug.Log("el randm " + rand);
 
     }

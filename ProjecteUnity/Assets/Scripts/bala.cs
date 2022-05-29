@@ -46,6 +46,12 @@ public class bala : MonoBehaviour
                 Destroy(gameObject);
               
           }
+          if (col.gameObject.CompareTag("enemy"))
+          {
+              Instantiate(impactEffect, transform.position, transform.rotation);
+                Destroy(gameObject);
+              
+          }
 
         
 
