@@ -37,8 +37,8 @@ public class Item : MonoBehaviour
                 {
                     player.GetComponent<PlayerMovement>().health = player.GetComponent<PlayerMovement>().maxhealth;
                     player.GetComponent<PlayerMovement>().hpText.text = player.GetComponent<PlayerMovement>().health + "";
-
                     player.GetComponent<Inventory>().removeItem(slot);
+                    return;
                 }
                 player.GetComponent<Inventory>().removeItem(slot);
             }
@@ -53,10 +53,9 @@ public class Item : MonoBehaviour
                 {
                     player.GetComponent<PlayerMovement>().health = player.GetComponent<PlayerMovement>().maxhealth;
                     player.GetComponent<PlayerMovement>().hpText.text = player.GetComponent<PlayerMovement>().health + "";
-
                     player.GetComponent<Inventory>().removeItem(slot);
+                    return;
                 }
-
                 player.GetComponent<Inventory>().removeItem(slot);
             }
 

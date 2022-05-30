@@ -21,61 +21,62 @@ public class UpgradeButtton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        btn.onClick.AddListener(comprobarId);
-        preu.text = preuStandart+"";
         LoadData();
+        btn.onClick.AddListener(comprobarId);
+        //preu.text = preuStandart+"";
+        if (ID==1) {
+            if (cmh == 4)
+            {
+                preu.text = "Max";
+            }
+            else {
+                preu.text = preuStandart * cmh + "";
+            }
+        }
+        if (ID == 2)
+        {
+            if (cmh == 4)
+            {
+                preu.text = "Max";
+            }
+            else
+            {
+                preu.text = preuStandart * cms + "";
+            }
+        }
+        if (ID == 3)
+        {
+            if (cmh == 4)
+            {
+                preu.text = "Max";
+            }
+            else
+            {
+                preu.text = preuStandart * cdm + "";
+            }
+            
+        }
+        if (ID == 4)
+        {
+            if (cmh == 4)
+            {
+                preu.text = "Max";
+            }
+            else
+            {
+                preu.text = preuStandart * cas + "";
+            }
+        }
         //Debug.Log("vida " + cmh + " aspeed " + cas + " movespeed " + cms + " dmg " + cdm);
     }
     // Update is called once per frame
     void Update()
     {
-        
-        if (cmh == 4) {
-            preu.text = "Max";
-            
-        }
-        if (!preu.text.Equals("Max"))
-            {
-                quantitatMonedes = monedes.text;
-                qm = int.Parse(quantitatMonedes);
-                quantitatPreu = preu.text;
-                qp = int.Parse(quantitatPreu);
-            }
-        if (cas == 4)
-        {
-            preu.text = "Max";
-            if (!preu.text.Equals("Max"))
-            {
-                quantitatMonedes = monedes.text;
-                qm = int.Parse(quantitatMonedes);
-                quantitatPreu = preu.text;
-                qp = int.Parse(quantitatPreu);
-            }
 
-        }
-        if (cms == 4)
-        {
-            preu.text = "Max";
-            if (!preu.text.Equals("Max"))
-            {
-                quantitatMonedes = monedes.text;
-                qm = int.Parse(quantitatMonedes);
-                quantitatPreu = preu.text;
-                qp = int.Parse(quantitatPreu);
-            }
-        }
-        if (cdm == 4)
-        {
-            preu.text = "Max";
-            if (!preu.text.Equals("Max"))
-            {
-                quantitatMonedes = monedes.text;
-                qm = int.Parse(quantitatMonedes);
-                quantitatPreu = preu.text;
-                qp = int.Parse(quantitatPreu);
-            }
-        }
+        quantitatMonedes = monedes.text;
+        qm = int.Parse(quantitatMonedes);
+        quantitatPreu = preu.text;
+        qp = int.Parse(quantitatPreu);
     }
     
     void comprobarId() {
@@ -138,7 +139,7 @@ public class UpgradeButtton : MonoBehaviour
                     monedes.text = resta + "";
                     int cost = preuStandart * cas;
                     preu.text = "" + cost;
-                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().attackspeed += 0.1f;
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().attackspeed -= 0.05f;
                     SaveData();
                 }
             }

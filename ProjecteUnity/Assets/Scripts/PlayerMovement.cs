@@ -150,7 +150,7 @@ public class PlayerMovement : MonoBehaviour
     void die()
     {
         health = maxhealth;
-        dmg = 20;
+       
         SceneManager.LoadScene("Lose");
     }
 }

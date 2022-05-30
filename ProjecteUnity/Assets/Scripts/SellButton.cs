@@ -12,12 +12,12 @@ public class SellButton : MonoBehaviour
     int countPreu;
     int cGemes;
     private GameObject[] slot;
-    private GameObject inv;
+    private GameObject player;
     void Start()
     {
         btn.onClick.AddListener(vendre);
-        inv = GameObject.FindGameObjectWithTag("Player");
-        slot = inv.GetComponent<Inventory>().slot;
+        player = GameObject.FindGameObjectWithTag("Player");
+        slot = player.GetComponent<Inventory>().slot;
     }
 
     // Update is called once per frame
@@ -50,8 +50,8 @@ public class SellButton : MonoBehaviour
             if (slot[i].GetComponent<Slot>().ID == 4)
             {
                 cGemes = cGemes + (slot[i].GetComponent<Slot>().quantity * 10);
-                GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>().gp = 0;
-                GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>().gp2 = 0;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>().gm = 0;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>().gm2 = 0;
                 slot[i].GetComponent<Slot>().slotText.text = 0 + "";
                 slot[i].GetComponent<Slot>().item = null;
                 slot[i].GetComponent<Slot>().quantity = 0;
@@ -67,8 +67,8 @@ public class SellButton : MonoBehaviour
             if (slot[i].GetComponent<Slot>().ID == 5)
             {
                 cGemes = cGemes + (slot[i].GetComponent<Slot>().quantity * 25);
-                GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>().gp = 0;
-                GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>().gp2 = 0;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>().gg = 0;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>().gg2 = 0;
                 slot[i].GetComponent<Slot>().slotText.text = 0 + "";
                 slot[i].GetComponent<Slot>().item = null;
                 slot[i].GetComponent<Slot>().quantity = 0;

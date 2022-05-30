@@ -18,7 +18,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler
     public Transform slotIcon, slotIcon2;
     public Text slotText;
     public bool ple;
-    
+
     public event Action<Slot> OnItemClicked;
     private void Start()
     {
@@ -45,4 +45,3 @@ public class Slot : MonoBehaviour, IPointerClickHandler
             useItem();
     }
 }
-

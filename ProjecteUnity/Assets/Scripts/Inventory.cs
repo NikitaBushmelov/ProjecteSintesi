@@ -257,31 +257,66 @@ public class Inventory : MonoBehaviour
     public void removeItem(Slot s)
     {
         for (int c = 0; c < slot.Length; c++)
-        {            
-            if (slot[c].GetComponent<Slot>().ID == s.ID && slot[c].GetComponent<Slot>().quantity > 0){
-                slot[c].GetComponent<Slot>().quantity = slot[c].GetComponent<Slot>().quantity - 1;
-                slot[c].GetComponent<Slot>().slotText.text = slot[c].GetComponent<Slot>().quantity + "";
-                pp--;
-                pg--;
-                gp--;
-                gm--;
-                gg--;
-                if (slot[c].GetComponent<Slot>().quantity == 0)
+        {
+            if (slot[c].transform.position==s.transform.position) {
+                Debug.Log("posicio corecta");
+                if (slot[c].GetComponent<Slot>().ID == s.ID && slot[c].GetComponent<Slot>().quantity > 0)
                 {
-                    pp2 = 0;
-                    pg2 = 0;
-                    gp2 = 0;
-                    gm2 = 0;
-                    gg2 = 0;
-                    slot[c].GetComponent<Slot>().item = null;
-                     slot[c].GetComponent<Slot>().ID = 0;
-                     slot[c].GetComponent<Slot>().type = null;
-                     slot[c].GetComponent<Slot>().desc = null;
-                     slot[c].GetComponent<Slot>().icon = null;
-                     slot[c].GetComponent<Slot>().empty = false;
-                     slot[c].GetComponent<Slot>().updateIcon();
+                    slot[c].GetComponent<Slot>().quantity = slot[c].GetComponent<Slot>().quantity - 1;
+                    slot[c].GetComponent<Slot>().slotText.text = slot[c].GetComponent<Slot>().quantity + "";
+                    if (slot[c].GetComponent<Slot>().ID == 1)
+                    {
+                        pp--;
+                    }
+                    if (slot[c].GetComponent<Slot>().ID == 2)
+                    {
+                        pg--;
+                    }
+                    if (slot[c].GetComponent<Slot>().ID == 3)
+                    {
+                        gp--;
+                    }
+                    if (slot[c].GetComponent<Slot>().ID == 4)
+                    {
+                        gm--;
+                    }
+                    if (slot[c].GetComponent<Slot>().ID == 5)
+                    {
+                        gg--;
+                    }
+                    if (slot[c].GetComponent<Slot>().quantity == 0)
+                    {
+                        if (slot[c].GetComponent<Slot>().ID == 1)
+                        {
+                            pp2 = 0;
+                        }
+                        if (slot[c].GetComponent<Slot>().ID == 2)
+                        {
+                            pg2 = 0;
+                        }
+                        if (slot[c].GetComponent<Slot>().ID == 3)
+                        {
+                            gp2 = 0;
+                        }
+                        if (slot[c].GetComponent<Slot>().ID == 4)
+                        {
+                            gm2 = 0;
+                        }
+                        if (slot[c].GetComponent<Slot>().ID == 5)
+                        {
+                            gg2 = 0;
+                        }
+                        slot[c].GetComponent<Slot>().item = null;
+                        slot[c].GetComponent<Slot>().ID = 0;
+                        slot[c].GetComponent<Slot>().type = null;
+                        slot[c].GetComponent<Slot>().desc = null;
+                        slot[c].GetComponent<Slot>().icon = null;
+                        slot[c].GetComponent<Slot>().empty = false;
+                        slot[c].GetComponent<Slot>().updateIcon();
+                    }
                 }
             }
+            
 
         }
     }
